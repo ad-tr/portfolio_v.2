@@ -2,110 +2,125 @@ import Image from "next/image";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="relative w-full min-h-screen bg-black overflow-hidden flex flex-col border-t border-white/20 justify-center py-16 lg:py-20 xl:py-40">
+        <section id="about" className="relative w-full h-screen bg-black overflow-hidden border-t border-white/20">
 
-            {/* Background Texture - Noise/Grain */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none z-0">
-                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10"></div> {/* Assuming noise texture or just keep it simple */}
+            {/* Background Grid */}
+            <div className="absolute top-0 left-0 w-full h-full z-0 opacity-20 pointer-events-none">
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:100px_100px]" />
             </div>
 
-            <div className="container max-w-[2000px] mx-auto px-6 lg:px-8 xl:px-20 relative z-10 flex flex-col lg:flex-row items-center">
+            {/* Main Grid Layout - Asymmetric Blocks */}
+            <div className="w-full max-w-[2500px] h-full mx-auto grid grid-cols-12 grid-rows-12 relative z-10">
 
-                {/* VISUAL LAYOUT: Asymmetric & Smooth */}
+                {/* BLOCK 1: Large Image - Top Left (6x8) */}
+                <div className="col-span-12 lg:col-span-6 row-span-8 relative border-r border-b border-white/20 overflow-hidden group">
+                    <Image
+                        src="/images/about.jpg"
+                        alt="Profile Portrait"
+                        fill
+                        className="object-cover object-center"
+                    />
 
-                {/* 1. Large Background Typography (Parallax-ish feel) */}
-                <div className="absolute top-10 left-0 w-full overflow-hidden select-none pointer-events-none opacity-[0.03]">
-                    <h2 className="text-[20vw] lg:text-[15vw] xl:text-[20vw] leading-none font-black text-white whitespace-nowrap -ml-20">
-                        ARCHITECT
-                    </h2>
+                    {/* Overlay gradient */}
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.4),transparent)] z-20"></div>
+
+                    {/* HUD Corner */}
+                    <div className="absolute top-8 right-8 w-20 h-20 border-t border-r border-white/50 z-30"></div>
+
+                    {/* Identity Tag */}
+                    <div className="absolute bottom-8 left-8 z-30">
+                        <div className="font-mono text-xs text-orange-400 mb-2">DEVELOPER & CREATOR</div>
+                        <div className="text-white font-bold text-2xl lg:text-3xl font-chakra-petch">ADRIEN TRANCHANT</div>
+                    </div>
                 </div>
 
-                {/* 2. LEFT SIDE: Content (Overlapping) */}
-                <div className="w-full lg:w-1/2 relative z-20 space-y-8 lg:space-y-8 lg:pr-8 xl:pr-20">
+                {/* BLOCK 2: Main Content - Top Right (6x8) */}
+                <div className="col-span-12 lg:col-span-6 row-span-8 relative border-b border-white/20 bg-black/40 backdrop-blur-sm flex flex-col justify-center px-8 lg:px-12 xl:px-16 py-12 lg:py-0">
 
-                    {/* Header */}
-                    <div>
-                        {/* Decorative Top Tag */}
-                        <div className="flex items-center space-x-2 text-white font-mono text-xs lg:text-sm tracking-widest border border-white/20 px-2 py-1 lg:px-3 lg:py-1 bg-white/5 rounded-sm mb-4">
-                            <span>Profile Data</span>
+                    {/* Main Heading */}
+                    <div className="relative space-y-4">
+                        <div className="flex items-center gap-3">
+                            <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
+                            <span className="font-mono text-[10px] text-orange-400 uppercase tracking-widest">Selected Works</span>
                         </div>
-                        <h2 className="text-5xl md:text-6xl lg:text-5xl xl:text-8xl font-medium tracking-tighter text-white mix-blend-difference">
-                            BEYOND <br />
-                            <span className="font-thin text-gray-400">THE CODE.</span>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-white leading-[0.9] mb-8">
+                            A PROPOS
                         </h2>
                     </div>
 
-                    {/* Bio Text */}
-                    <div className="space-y-6 lg:space-y-8 text-base md:text-lg lg:text-xl text-gray-300 font-light leading-relaxed max-w-lg">
-                        <p>
-                            I don't just build websites; I engineer <span className="text-white border-b border-white/30 pb-0.5">digital ecosystems</span>. Driven by the philosophy that form and function are one, my work explores the minimalist beauty of complex systems.
+                    {/* Description */}
+                    <div className="space-y-4 max-w-xl">
+                        <p className="font-rajdhani text-base lg:text-lg text-gray-300 font-medium leading-relaxed">
+                            I'm a <span className="text-white border-b border-white/30 pb-0.5">full-stack developer</span> passionate about creating beautiful, high-performance applications that solve real problems.
                         </p>
-                        <p className="text-gray-500">
-                            From generative AI to immersive WebGL interfaces, every pixel serves a purpose. No clutter. No noise. Just pure, unadulterated interaction.
+                        <p className="font-rajdhani text-base lg:text-lg text-gray-300 font-medium leading-relaxed">
+                            From AI-powered tools to immersive web experiences, I love turning complex ideas into elegant solutions that people actually enjoy using.
+                        </p>
+                        <p className="font-mono text-xs lg:text-sm text-neutral-500 leading-relaxed">
+                            Specialized in modern web development, artificial intelligence integration, and creating seamless user experiences.
                         </p>
                     </div>
 
-                    {/* Stats / Signature - Horizontal Flow */}
-                    <div className="flex items-center gap-8 md:gap-12 pt-6 lg:pt-8 px-0">
-                        <div>
-                            <span className="block text-3xl md:text-4xl font-bold text-white font-chakra-petch">04+</span>
-                            <span className="text-[10px] md:text-xs font-mono text-gray-600 uppercase tracking-widest leading-none">Years Exp.</span>
-                        </div>
-                        <div className="w-px h-12 bg-white/10"></div>
-                        <div>
-                            <span className="block text-3xl md:text-4xl font-bold text-white font-chakra-petch">25+</span>
-                            <span className="text-[10px] md:text-xs font-mono text-gray-600 uppercase tracking-widest leading-none">Projects</span>
-                        </div>
-                        <div className="w-px h-12 bg-white/10"></div>
-                        <div className="font-mono text-[10px] lg:text-xs text-gray-500">
-                            STATUS: <span className="text-green-500 animate-pulse">ONLINE</span> <br />
-                            LOC: PARIS
-                        </div>
+                    {/* HUD Corner */}
+                    <div className="absolute bottom-8 right-8 w-16 h-16 border-b border-r border-white/30"></div>
+                </div>
+
+                {/* BLOCK 3: Stat 1 - Bottom Left Quarter (3x4) */}
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-white/5 transition-colors cursor-help" title="4+ years of professional development experience">
+                    <div className="text-center">
+                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">04+</div>
+                        <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mt-2">Years Experience</div>
+                    </div>
+                    <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-white/20"></div>
+                    {/* Tooltip */}
+                    <div className="absolute bottom-full mb-2 px-3 py-2 bg-black/90 border border-white/20 text-white text-xs font-mono whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                        4+ years building apps
                     </div>
                 </div>
 
-                {/* 3. RIGHT SIDE: The Image (Floating Monolith Style) */}
-                <div className="w-full lg:w-1/2 relative mt-12 lg:mt-0 flex justify-center lg:justify-end">
+                {/* BLOCK 4: Stat 2 - Bottom (3x4) */}
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-white/5 transition-colors cursor-help" title="25+ completed projects">
+                    <div className="text-center">
+                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">25+</div>
+                        <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mt-2">Projects Completed</div>
+                    </div>
+                    {/* Tooltip */}
+                    <div className="absolute bottom-full mb-2 px-3 py-2 bg-black/90 border border-white/20 text-white text-xs font-mono whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                        25+ successful projects
+                    </div>
+                </div>
 
-                    {/* The Image Container - Rounded, tilted or smooth */}
-                    <div className="relative w-full max-w-lg lg:max-w-lg xl:max-w-xl aspect-[3/4] group">
+                {/* BLOCK 5: Stat 3 - Bottom (3x4) */}
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-white/5 transition-colors cursor-help" title="Commitment to quality and reliability">
+                    <div className="text-center">
+                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">100%</div>
+                        <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mt-2">Dedication</div>
+                    </div>
+                    {/* Tooltip */}
+                    <div className="absolute bottom-full mb-2 px-3 py-2 bg-black/90 border border-white/20 text-white text-xs font-mono whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                        Fully committed to quality
+                    </div>
+                </div>
 
-                        {/* 1. Main Image - Grayscale & High Contrast */}
-                        <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_0_100px_rgba(255,255,255,0.05)] border border-white/10 transition-transform duration-700 ease-out group-hover:-translate-y-2">
-                            <Image
-                                src="/images/about.jpg"
-                                alt="Abstract Architecture"
-                                fill
-                                className="object-cover brightness-90 group-hover:scale-105 transition-transform duration-1000"
-                            />
-
-                            {/* Inner Glow/Vignette */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+                {/* BLOCK 6: Status Info - Bottom Right (3x4) */}
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-white/5 transition-colors cursor-help" title="Currently available for new projects">
+                    <div className="text-center space-y-3">
+                        <div className="flex items-center justify-center space-x-2">
+                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            <span className="font-mono text-xs text-gray-400 uppercase tracking-widest">Available for Work</span>
                         </div>
-
-                        {/* 2. Decorative Elements floating around image */}
-
-                        {/* Bottom Left: Glass Card */}
-                        <div className="absolute -bottom-10 -left-10 w-48 p-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg shadow-2xl z-30 hidden md:block">
-                            <div className="flex justify-between items-center mb-2">
-                                <span className="text-[10px] font-mono text-gray-500 uppercase">SYS_LOAD</span>
-                                <span className="text-[10px] font-mono text-white">98%</span>
-                            </div>
-                            <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                                <div className="w-[98%] h-full bg-white rounded-full"></div>
-                            </div>
-                        </div>
-
-                        {/* Top Right: Accent Line */}
-                        <div className="absolute -top-10 -right-10 w-20 h-20 border-t border-r border-white/20 rounded-tr-3xl z-0"></div>
-
-                        {/* Behind Glow */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/5 blur-[100px] -z-10 rounded-full"></div>
-
+                        <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">PARIS</div>
+                        <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">France</div>
+                    </div>
+                    <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-white/20"></div>
+                    {/* Tooltip */}
+                    <div className="absolute bottom-full mb-2 px-3 py-2 bg-black/90 border border-white/20 text-white text-xs font-mono whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                        Open to new opportunities
                     </div>
                 </div>
 
             </div>
+
         </section>
     );
 }

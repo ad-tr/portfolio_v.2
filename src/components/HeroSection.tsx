@@ -22,16 +22,13 @@ export default function HeroSection() {
                     </div>
 
                     <div className="flex-1 flex flex-col justify-center items-start pl-6 pr-6 lg:pl-10 lg:pr-8 xl:pl-20 xl:pr-20 space-y-6 lg:space-y-6">
-                        {/* Decorative Tag */}
-                        <div className="flex items-center space-x-2 text-white font-mono text-xs lg:text-sm tracking-widest border border-white/20 px-2 py-1 lg:px-3 lg:py-1 bg-white/5 rounded-sm mb-4">
-                            <span className="w-2 h-2 bg-orange-400"></span>
-                            <span>SYSTEM_ONLINE // V2.0</span>
-                        </div>
-
-                        <div className="relative">
+                        <div className="relative space-y-4">
+                            <div className="flex items-center gap-3">
+                                <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
+                                <span className="font-mono text-[10px] text-orange-400 uppercase tracking-widest">Selected Works</span>
+                            </div>
                             <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-medium tracking-tighter leading-[0.9] text-white z-20">
-                                ADRIEN <br />
-                                <span className="text-white">TRANCHANT</span>
+                                ADRIEN TRANCHANT
                             </h1>
                         </div>
 
@@ -52,10 +49,8 @@ export default function HeroSection() {
 
                 </div>
 
-                {/* RIGHT COLUMN: Full Height Image Area */}
                 <div className="w-full lg:w-1/2 h-full right-0 top-0 lg:relative flex items-center justify-center border-l border-white/20 lg:justify-end overflow-hidden z-10 opacity-30 lg:opacity-100 mix-blend-screen lg:mix-blend-normal pointer-events-none lg:pointer-events-auto">
                     <div className="relative w-full h-full">
-                        {/* Image taking full height, covering the right side */}
                         <Image
                             src="/images/hero.jpg"
                             alt="Futuristic Abstract Structure"
@@ -64,10 +59,8 @@ export default function HeroSection() {
                             priority
                         />
 
-                        {/* Overlay Mesh/Lines to integrate it better */}
                         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.5),transparent)] z-20"></div>
 
-                        {/* HUD Elements over image */}
                         <div className="absolute top-10 right-10 w-24 h-24 border-t border-r border-white/50 z-30"></div>
                         <div className="absolute bottom-10 left-10 w-24 h-24 border-b border-l border-white/50 z-30"></div>
                     </div>
@@ -75,10 +68,8 @@ export default function HeroSection() {
 
             </div>
 
-            {/* BOTTOM STRIP: Massive Dashboard Footer */}
             <div className="w-full border-t border-white/20 z-50 bg-black/60 backdrop-blur-sm">
                 <div className="w-full max-w-[2500px] mx-auto flex flex-col lg:flex-row h-auto lg:h-28 xl:h-40 pl-6 lg:pl-10 xl:pl-10">
-                    {/* SECTION 1: Identity & Core Status */}
                     <div className="w-full lg:w-1/3 border-b lg:border-b-0 lg:border-r border-white/20 p-6 lg:p-6 xl:p-12 flex flex-col justify-between group cursor-default hover:bg-white/5 transition-colors">
                         <div>
                             <div className="flex items-center space-x-2 text-white text-[10px] lg:text-xs font-mono tracking-widest mb-1 lg:mb-2">
@@ -94,7 +85,6 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* SECTION 2: Active Modules (Tags) */}
                     <div className="w-full lg:w-1/3 border-b lg:border-b-0 lg:border-r border-white/20 p-6 lg:p-8 xl:p-12 flex flex-col justify-center space-y-4 hover:bg-white/5 transition-colors">
                         <span className="text-[10px] lg:text-xs font-mono text-gray-500 uppercase tracking-widest">Active Modules</span>
                         <div className="flex flex-wrap gap-2 lg:gap-3">
@@ -106,7 +96,6 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* SECTION 3: Data Stream & Scroll */}
                     <div className="w-full lg:w-1/3 p-6 lg:p-8 xl:p-12 flex flex-col justify-between hover:bg-white/5 transition-colors">
                         <div className="flex justify-between items-start">
                             <span className="text-[10px] lg:text-xs font-mono text-gray-500 uppercase tracking-widest">DATA_STREAM</span>
