@@ -8,7 +8,7 @@ export default function Navbar() {
                     TRANCHANT.AI
                 </Link>
 
-                <div className="flex items-center space-x-4 lg:space-x-6 font-mono text-xs tracking-widest text-gray-400">
+                <div className="flex items-center space-x-4 lg:space-x-6 font-mono text-sm tracking-widest text-gray-400">
                     <Link href="#projects" className="hover:text-white transition-colors uppercase">projects</Link>
                     <Link href="#about" className="hover:text-white transition-colors uppercase">about</Link>
                     <Link href="#contact" className="hover:text-white transition-colors uppercase">contact</Link>

@@ -1,7 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Navbar from "./Navbar";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useParallax } from "@/hooks/useParallax";
 
 export default function HeroSection() {
+    const contentReveal = useScrollReveal({ threshold: 0.2 });
+    const imageParallax = useParallax({ speed: 0.2 });
+
     return (
         <section className="relative w-full h-screen overflow-hidden bg-black flex flex-col">
 
@@ -21,11 +28,11 @@ export default function HeroSection() {
                         <Navbar />
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-center items-start pl-6 pr-6 lg:pl-10 lg:pr-8 xl:pl-20 xl:pr-20 space-y-6 lg:space-y-6">
+                    <div ref={contentReveal.ref} className={`flex-1 flex flex-col justify-center items-start pl-6 pr-6 lg:pl-10 lg:pr-8 xl:pl-20 xl:pr-20 space-y-6 lg:space-y-6 scroll-reveal ${contentReveal.isVisible ? 'visible' : ''}`}>
                         <div className="relative space-y-4">
                             <div className="flex items-center gap-3">
                                 <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
-                                <span className="font-mono text-[10px] text-orange-400 uppercase tracking-widest">Selected Works</span>
+                                <span className="font-mono text-xs text-orange-400 uppercase tracking-widest">Selected Works</span>
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-medium tracking-tighter leading-[0.9] text-white z-20">
                                 ADRIEN TRANCHANT
@@ -49,8 +56,14 @@ export default function HeroSection() {
 
                 </div>
 
-                <div className="w-full lg:w-1/2 h-full right-0 top-0 lg:relative flex items-center justify-center border-l border-white/20 lg:justify-end overflow-hidden z-10 opacity-30 lg:opacity-100 mix-blend-screen lg:mix-blend-normal pointer-events-none lg:pointer-events-auto">
-                    <div className="relative w-full h-full">
+                <div ref={imageParallax.ref} className="w-full lg:w-1/2 h-full right-0 top-0 lg:relative flex items-center justify-center border-l border-white/20 lg:justify-end overflow-hidden z-10 opacity-30 lg:opacity-100 mix-blend-screen lg:mix-blend-normal pointer-events-none lg:pointer-events-auto">
+                    <div
+                        style={{
+                            transform: `translateY(${imageParallax.transform.y}px) scale(${imageParallax.transform.scale})`,
+                            transition: 'transform 0.1s ease-out'
+                        }}
+                        className="relative w-full h-full"
+                    >
                         <Image
                             src="/images/hero.jpg"
                             alt="Futuristic Abstract Structure"
@@ -72,7 +85,7 @@ export default function HeroSection() {
                 <div className="w-full max-w-[2500px] mx-auto flex flex-col lg:flex-row h-auto lg:h-28 xl:h-40 pl-6 lg:pl-10 xl:pl-10">
                     <div className="w-full lg:w-1/3 border-b lg:border-b-0 lg:border-r border-white/20 p-6 lg:p-6 xl:p-12 flex flex-col justify-between group cursor-default hover:bg-white/5 transition-colors">
                         <div>
-                            <div className="flex items-center space-x-2 text-white text-[10px] lg:text-xs font-mono tracking-widest mb-1 lg:mb-2">
+                            <div className="flex items-center space-x-2 text-white text-xs lg:text-sm font-mono tracking-widest mb-1 lg:mb-2">
                                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
                                 <span>SYSTEM_READY</span>
                             </div>
@@ -80,16 +93,16 @@ export default function HeroSection() {
                                 NEURAL_CORE
                             </h3>
                         </div>
-                        <div className="text-[10px] lg:text-xs font-mono text-gray-500 mt-2 lg:mt-0">
+                        <div className="text-xs lg:text-sm font-mono text-gray-500 mt-2 lg:mt-0">
                             ID: AT-890 // V2.0.4 ACTIVE
                         </div>
                     </div>
 
                     <div className="w-full lg:w-1/3 border-b lg:border-b-0 lg:border-r border-white/20 p-6 lg:p-8 xl:p-12 flex flex-col justify-center space-y-4 hover:bg-white/5 transition-colors">
-                        <span className="text-[10px] lg:text-xs font-mono text-gray-500 uppercase tracking-widest">Active Modules</span>
+                        <span className="text-xs lg:text-sm font-mono text-gray-500 uppercase tracking-widest">Active Modules</span>
                         <div className="flex flex-wrap gap-2 lg:gap-3">
                             {['GEN_AI', 'LLM_OPS', 'COMPUTER_VISION', 'AGENTS'].map((tag) => (
-                                <span key={tag} className="border border-white/10 px-2 py-1 lg:px-3 lg:py-1.5 bg-white/5 text-[10px] lg:text-xs text-gray-300 font-mono hover:border-white/40 hover:text-white transition-all cursor-crosshair">
+                                <span key={tag} className="border border-white/10 px-2 py-1 lg:px-3 lg:py-1.5 bg-white/5 text-2xs lg:text-xs text-gray-300 font-mono hover:border-white/40 hover:text-white transition-all cursor-crosshair">
                                     [{tag}]
                                 </span>
                             ))}
@@ -98,7 +111,7 @@ export default function HeroSection() {
 
                     <div className="w-full lg:w-1/3 p-6 lg:p-8 xl:p-12 flex flex-col justify-between hover:bg-white/5 transition-colors">
                         <div className="flex justify-between items-start">
-                            <span className="text-[10px] lg:text-xs font-mono text-gray-500 uppercase tracking-widest">DATA_STREAM</span>
+                            <span className="text-xs lg:text-sm font-mono text-gray-500 uppercase tracking-widest">DATA_STREAM</span>
                             <div className="flex space-x-1">
                                 {[...Array(3)].map((_, i) => (
                                     <div key={i} className={`w-1 h-1 bg-white/20 animate-pulse`} style={{ animationDelay: `${i * 100}ms` }}></div>
