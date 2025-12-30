@@ -2,6 +2,10 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import TransitionCurve from "@/components/TransitionCurve";
 import ProjectsSection from "@/components/ProjectsSection";
+import SkillsSection from "@/components/SkillsSection";
+import TransitionCurveInverted from "@/components/TransitionCurveInverted";
+import ExperienceSection from "@/components/ExperienceSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -10,6 +14,10 @@ export default function Home() {
       <AboutSection />
       <TransitionCurve />
       <ProjectsSection />
+      <SkillsSection />
+      <TransitionCurveInverted />
+      <ExperienceSection />
+      <Footer />
     </main>
   );
 }
