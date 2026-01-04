@@ -149,7 +149,7 @@ export default function ProjectsSection() {
                                     </div>
 
                                     {/* Title */}
-                                    <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-4 group-hover:text-orange-400 transition-colors duration-300">
+                                    <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-4 group-hover:text-orange-600 transition-colors duration-300">
                                         {project.title}
                                     </h3>
 
