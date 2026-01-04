@@ -110,6 +110,7 @@ h6 {
 /* Smooth Scroll Behavior */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset pour la navigation vers les sections */
 }
 
 /* Page Loader Animations */

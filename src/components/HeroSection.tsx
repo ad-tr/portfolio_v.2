@@ -44,23 +44,23 @@ export default function HeroSection() {
                     {/* Branding */}
                     <div className="relative">
                         {/* Decorative 'Scanline' or Glow behind text */}
-                        <div className="absolute -inset-4 bg-orange-500/10 blur-3xl rounded-full z-0 opacity-50"></div>
+                        <div className="absolute -inset-4 bg-blue-400/10 blur-3xl rounded-full z-0 opacity-50"></div>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-7xl font-bold tracking-tighter text-white font-chakra-petch mb-2 relative z-10">
+                    <h1 className="text-5xl md:text-7xl lg:text-7xl xl:text-7xl font-bold tracking-tighter text-white font-chakra-petch mb-2 relative z-10">
                         ADRIEN <br />TRANCHANT
                     </h1>
                     {/* Description */}
                     <div className="max-w-2xl pt-2">
                         <p className="font-rajdhani text-lg md:text-xl lg:text-2xl text-gray-300 font-medium tracking-wide leading-relaxed">
-                            <span className="text-white border-b border-white/30 pb-0.5">Designing intelligence.</span> Building the future of digital interactions through advanced neural networks and generative systems.
+                            <span className="text-white border-b border-white/30 pb-0.5">Passionné par l'intelligence artificielle.</span> J'apprends le deep learning en réimplémentant des concepts et en participant à des challenges pour comprendre comment ils fonctionnent.
                         </p>
                     </div>
 
                     {/* Action Button */}
-                    <button className="group relative px-8 py-3 bg-white text-black font-bold tracking-widest transition-all hover:bg-gray-200 mt-6 overflow-hidden rounded-none">
+                    <button className="group relative px-8 py-3 bg-white text-black font-bold tracking-widest transition-all hover:bg-gray-200 mt-6 overflow-hidden rounded-none" onClick={() => window.location.href = '/#about'}>
                         <span className="relative z-10 flex items-center gap-3">
-                            INITIALIZE_PROTOCOL <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            DÉCOUVRIR MON PORTFOLIO <span className="group-hover:translate-x-1 transition-transform">→</span>
                         </span>
                     </button>
 
@@ -74,7 +74,7 @@ export default function HeroSection() {
                     {/* Left Stat */}
                     <div className="hidden md:flex flex-1 flex-col items-center justify-center">
                         <div className="flex items-center gap-2 text-xs font-mono text-white/80 font-bold mb-1 tracking-wider">
-                            <span className="w-1.5 h-1.5 bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
+                            <span className="w-1.5 h-1.5 bg-blue-300 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
                             SYSTEM STATS
                         </div>
                         <span className="font-chakra-petch text-lg font-bold text-white tracking-wide">NEURAL_CORE V.2.0</span>
@@ -85,7 +85,7 @@ export default function HeroSection() {
 
                     {/* Center Modules List - Desktop Only */}
                     <div className="hidden lg:flex flex-1 justify-center items-center gap-4">
-                        {['GEN_AI', 'LLM', 'VISION', 'AGENTS'].map((tag) => (
+                        {['MACHINE_LEARNING', 'LLM', 'CNN'].map((tag) => (
                             <span key={tag} className="text-xs font-mono font-bold text-white border border-white/20 px-5 py-2 bg-white/5 hover:bg-white/20 hover:border-white/40 transition-all cursor-crosshair tracking-wider">
                                 {tag}
                             </span>
@@ -98,7 +98,7 @@ export default function HeroSection() {
                     {/* Right Scroll Indicator */}
                     <div className="flex flex-1 justify-center items-center gap-4 group cursor-pointer">
                         <span className="hidden md:block text-xs font-mono font-bold text-white tracking-[0.2em] group-hover:text-white/80 transition-colors">SCROLL TO EXPLORE</span>
-                        <div className="w-10 h-10 border border-white/40 bg-white/5 flex items-center justify-center animate-bounce group-hover:bg-white group-hover:text-black transition-all">
+                        <div className="w-10 h-10 border border-white/40 bg-white/5 flex items-center justify-center animate-bounce group-hover:bg-white group-hover:text-black transition-all" onClick={() => window.location.href = '/#about'}>
                             <span className="text-sm">↓</span>
                         </div>
                     </div>

@@ -79,27 +79,27 @@ export default function ProjectsSection() {
                 {/* Header - Centré */}
                 <div className="text-center mb-16 lg:mb-24">
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
-                        <span className="font-mono text-xs text-orange-400 uppercase tracking-widest">Selected Works</span>
-                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
+                        <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
+                        <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Selected Works</span>
+                        <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tighter text-white leading-[0.9] mb-6">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-medium tracking-tighter text-white leading-[0.9] mb-6">
                         MES PROJETS
                     </h2>
-                    <p className="font-rajdhani text-base lg:text-lg text-gray-400 font-medium max-w-2xl mx-auto mb-8">
-                        Une sélection de mes réalisations récentes en IA et développement web.
+                    <p className="font-rajdhani text-base lg:text-xl text-gray-400 font-medium max-w-2xl mx-auto mb-8">
+                        Mes projets d'apprentissage en intelligence artificielle. Je réimplémente des concepts et participe à des challenges pour apprendre.
                     </p>
 
                     {/* Stats */}
                     <div className="flex items-center justify-center gap-8 lg:gap-12">
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">{String(projects.length).padStart(2, '0')}</div>
-                            <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">Projects</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projects</div>
                         </div>
                         <div className="w-px h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">2024</div>
-                            <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">Latest</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Latest</div>
                         </div>
                         <div className="w-px h-8 bg-white/20"></div>
                         <div className="text-center">
@@ -107,7 +107,7 @@ export default function ProjectsSection() {
                                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                                 <span className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">Active</span>
                             </div>
-                            <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">Status</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Status</div>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ export default function ProjectsSection() {
                             <div
                                 key={project.id}
                                 ref={cardReveal.ref}
-                                className={`group relative bg-black/40 backdrop-blur-sm border border-white/20 overflow-hidden hover:border-orange-400/50 transition-all duration-500 flex flex-col scroll-reveal scroll-reveal-delay-${(index % 4) + 1} ${cardReveal.isVisible ? 'visible' : ''}`}
+                                className={`group relative bg-black/40 backdrop-blur-sm border border-white/20 overflow-hidden hover:border-blue-400/50 transition-all duration-500 flex flex-col scroll-reveal scroll-reveal-delay-${(index % 4) + 1} ${cardReveal.isVisible ? 'visible' : ''}`}
                             >
                                 {/* Project Image Background */}
                                 <div className="relative h-64 lg:h-72 overflow-hidden">
@@ -133,12 +133,12 @@ export default function ProjectsSection() {
                                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
 
                                     {/* Project Number Badge */}
-                                    <div className="absolute top-4 left-4 font-mono text-xs text-orange-400 tracking-widest bg-black/60 backdrop-blur-sm px-3 py-1.5 border border-orange-400/30">
+                                    <div className="absolute top-4 left-4 font-mono text-xs text-blue-300 tracking-widest bg-black/60 backdrop-blur-sm px-3 py-1.5 border border-blue-300/30">
                                         {project.id}
                                     </div>
 
                                     {/* HUD Corner */}
-                                    <div className="absolute top-4 right-4 w-8 h-8 border-t border-r border-white/30 group-hover:border-orange-400/50 transition-colors"></div>
+                                    <div className="absolute top-4 right-4 w-8 h-8 border-t border-r border-white/30 group-hover:border-blue-400/50 transition-colors"></div>
                                 </div>
 
                                 {/* Content */}
@@ -149,12 +149,12 @@ export default function ProjectsSection() {
                                     </div>
 
                                     {/* Title */}
-                                    <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-4 group-hover:text-orange-600 transition-colors duration-300">
+                                    <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-4 group-hover:text-blue-400 transition-colors duration-300">
                                         {project.title}
                                     </h3>
 
                                     {/* Description */}
-                                    <p className="font-rajdhani text-base text-gray-300 font-medium leading-relaxed mb-6 flex-1">
+                                    <p className="font-rajdhani text-lg text-gray-300 font-medium leading-relaxed mb-6 flex-1">
                                         {project.description}
                                     </p>
 
@@ -176,14 +176,14 @@ export default function ProjectsSection() {
                                     {/* View Project Link */}
                                     <a
                                         href={project.link}
-                                        className="inline-flex items-center gap-2 text-sm font-mono text-orange-400 hover:text-white transition-colors group/link"
+                                        className="inline-flex items-center gap-2 text-sm font-mono text-blue-300 hover:text-white transition-colors group/link"
                                     >
                                         <span>View Project</span>
                                         <span className="group-hover/link:translate-x-1 transition-transform">→</span>
                                     </a>
 
                                     {/* Bottom HUD Corner */}
-                                    <div className="absolute bottom-4 left-4 w-8 h-8 border-b border-l border-white/20 group-hover:border-orange-400/30 transition-colors"></div>
+                                    <div className="absolute bottom-4 left-4 w-8 h-8 border-b border-l border-white/20 group-hover:border-blue-400/30 transition-colors"></div>
                                 </div>
                             </div>
                         );

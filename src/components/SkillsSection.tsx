@@ -4,37 +4,37 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function SkillsSection() {
     const skills = {
-        webDev: [
-            { name: "Next.js", years: "2", projects: "10+" },
-            { name: "React", years: "3", projects: "18+" },
-            { name: "TypeScript", years: "3", projects: "20+" },
-            { name: "JavaScript", years: "4", projects: "25+" }
+        deepLearning: [
+            { name: "PyTorch", years: "2", projects: "4+" },
+            { name: "Transformers", years: "1", projects: "2+" },
+            { name: "Réseaux de Neurones", years: "3", projects: "5+" },
+            { name: "NLP", years: "2", projects: "3+" }
         ],
-        backend: [
-            { name: "Python", years: "4", projects: "15+" },
-            { name: "Node.js", years: "3", projects: "12+" },
-            { name: "PostgreSQL", years: "3", projects: "12+" },
-            { name: "SQL", years: "3", projects: "12+" }
+        machineLearning: [
+            { name: "Scikit-Learn", years: "2", projects: "3+" },
+            { name: "Analyse de Données", years: "2", projects: "4+" },
+            { name: "Feature Engineering", years: "2", projects: "3+" },
+            { name: "Apprentissage Supervisé", years: "2", projects: "4+" }
         ],
-        ai: [
-            { name: "TensorFlow", years: "2", projects: "8+" },
-            { name: "LangChain", years: "1", projects: "5+" },
-            { name: "OpenAI API", years: "1", projects: "6+" },
-            { name: "Machine Learning", years: "2", projects: "10+" }
+        programmation: [
+            { name: "Python", years: "3", projects: "10+" },
+            { name: "JavaScript/TypeScript", years: "2", projects: "5+" },
+            { name: "NumPy", years: "3", projects: "6+" },
+            { name: "Pandas", years: "2", projects: "4+" }
         ],
-        devops: [
-            { name: "Git", years: "4", projects: "25+" },
-            { name: "Docker", years: "3", projects: "15+" },
-            { name: "AWS", years: "2", projects: "10+" },
-            { name: "CI/CD", years: "2", projects: "8+" }
+        devWeb: [
+            { name: "Next.js", years: "2", projects: "3+" },
+            { name: "React", years: "2", projects: "4+" },
+            { name: "Streamlit", years: "1", projects: "2+" },
+            { name: "TailwindCSS", years: "2", projects: "3+" }
         ]
     };
 
     const headerReveal = useScrollReveal({ threshold: 0.2 });
-    const webReveal = useScrollReveal({ threshold: 0.2 });
-    const backendReveal = useScrollReveal({ threshold: 0.2 });
-    const aiReveal = useScrollReveal({ threshold: 0.2 });
-    const devopsReveal = useScrollReveal({ threshold: 0.2 });
+    const deepLearningReveal = useScrollReveal({ threshold: 0.2 });
+    const machineLearningReveal = useScrollReveal({ threshold: 0.2 });
+    const programmationReveal = useScrollReveal({ threshold: 0.2 });
+    const devWebReveal = useScrollReveal({ threshold: 0.2 });
 
     return (
         <section id="skills" className="relative w-full min-h-screen bg-black py-20 lg:py-20">
@@ -48,32 +48,32 @@ export default function SkillsSection() {
                 {/* Header - Centré */}
                 <div ref={headerReveal.ref} className={`text-center mb-16 lg:mb-24 scroll-reveal ${headerReveal.isVisible ? 'visible' : ''}`}>
                     <div className="flex items-center justify-center gap-3 mb-4">
-                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
-                        <span className="font-mono text-xs text-orange-400 uppercase tracking-widest">Technical Stack</span>
-                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
+                        <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
+                        <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Technical Stack</span>
+                        <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium tracking-tighter text-white leading-[0.9] mb-6">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-medium tracking-tighter text-white leading-[0.9] mb-6">
                         COMPÉTENCES
                     </h2>
-                    <p className="font-rajdhani text-base lg:text-lg text-gray-400 font-medium max-w-2xl mx-auto mb-8">
-                        Technologies et outils que je maîtrise pour créer des solutions innovantes.
+                    <p className="font-rajdhani text-base lg:text-xl text-gray-400 font-medium max-w-2xl mx-auto mb-8">
+                        Technologies que j'apprends et utilise pour mes projets en intelligence artificielle.
                     </p>
 
                     {/* Stats */}
                     <div className="flex items-center justify-center gap-8 lg:gap-12">
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">4+</div>
-                            <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">Années</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Années</div>
                         </div>
                         <div className="w-px h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">12</div>
-                            <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">Technologies</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Technologies</div>
                         </div>
                         <div className="w-px h-8 bg-white/20"></div>
                         <div className="text-center">
-                            <div className="text-2xl lg:text-3xl font-bold text-orange-400 font-chakra-petch">25+</div>
-                            <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
+                            <div className="text-2xl lg:text-3xl font-bold text-blue-300 font-chakra-petch">25+</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
                         </div>
                     </div>
                 </div>
@@ -82,35 +82,35 @@ export default function SkillsSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
 
 
-                    {/* Web Development */}
+                    {/* Deep Learning */}
                     <div
-                        ref={webReveal.ref}
-                        className={`relative bg-black/40 backdrop-blur-sm border border-white/20 p-6 lg:p-8 hover:border-orange-400/50 transition-all duration-500 scroll-reveal scroll-reveal-delay-1 ${webReveal.isVisible ? 'visible' : ''}`}
+                        ref={deepLearningReveal.ref}
+                        className={`relative bg-black/40 backdrop-blur-sm border border-white/20 p-6 lg:p-8 hover:border-blue-300/50 transition-all duration-500 scroll-reveal scroll-reveal-delay-1 ${deepLearningReveal.isVisible ? 'visible' : ''}`}
                     >
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                            <h3 className="font-mono text-sm text-orange-400 uppercase tracking-widest">Web Development</h3>
+                            <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                            <h3 className="font-mono text-base text-blue-300 uppercase tracking-widest">Deep Learning</h3>
                         </div>
 
                         <div className="space-y-4">
-                            {skills.webDev.map((skill, index) => (
+                            {skills.deepLearning.map((skill, index) => (
                                 <div key={skill.name} className="group">
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-3">
-                                            <span className="font-mono text-sm text-gray-500">{String(index + 1).padStart(2, '0')}</span>
-                                            <span className="text-lg lg:text-xl font-bold text-white font-chakra-petch group-hover:text-orange-400 transition-colors">
+                                            <span className="font-mono text-gray-500">{String(index + 1).padStart(2, '0')}</span>
+                                            <span className="text-lg lg:text-2xl font-bold text-white font-chakra-petch group-hover:text-blue-300 transition-colors">
                                                 {skill.name}
                                             </span>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-4 ml-8">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-xs text-gray-500 uppercase">Exp:</span>
-                                            <span className="font-mono text-sm text-white">{skill.years} ans</span>
+                                            <span className="font-mono text-gray-500 uppercase">Exp:</span>
+                                            <span className="font-mono text-base text-white">{skill.years} ans</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-xs text-gray-500 uppercase">Projects:</span>
-                                            <span className="font-mono text-sm text-orange-400">{skill.projects}</span>
+                                            <span className="font-mono text-gray-500 uppercase">Projects:</span>
+                                            <span className="font-mono text-base text-blue-300">{skill.projects}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -121,35 +121,35 @@ export default function SkillsSection() {
                         <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-white/20"></div>
                     </div>
 
-                    {/* Backend Development */}
+                    {/* Machine Learning */}
                     <div
-                        ref={backendReveal.ref}
-                        className={`relative bg-black/40 backdrop-blur-sm border border-white/20 p-6 lg:p-8 hover:border-orange-400/50 transition-all duration-500 scroll-reveal scroll-reveal-delay-2 ${backendReveal.isVisible ? 'visible' : ''}`}
+                        ref={machineLearningReveal.ref}
+                        className={`relative bg-black/40 backdrop-blur-sm border border-white/20 p-6 lg:p-8 hover:border-blue-300/50 transition-all duration-500 scroll-reveal scroll-reveal-delay-2 ${machineLearningReveal.isVisible ? 'visible' : ''}`}
                     >
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                            <h3 className="font-mono text-sm text-orange-400 uppercase tracking-widest">Backend Development</h3>
+                            <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                            <h3 className="font-mono text-base text-blue-300 uppercase tracking-widest">Machine Learning</h3>
                         </div>
 
                         <div className="space-y-4">
-                            {skills.backend.map((skill, index) => (
+                            {skills.machineLearning.map((skill, index) => (
                                 <div key={skill.name} className="group">
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-3">
-                                            <span className="font-mono text-sm text-gray-500">{String(index + 1).padStart(2, '0')}</span>
-                                            <span className="text-lg lg:text-xl font-bold text-white font-chakra-petch group-hover:text-orange-400 transition-colors">
+                                            <span className="font-mono text-gray-500">{String(index + 1).padStart(2, '0')}</span>
+                                            <span className="text-lg lg:text-2xl font-bold text-white font-chakra-petch group-hover:text-blue-300 transition-colors">
                                                 {skill.name}
                                             </span>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-4 ml-8">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-xs text-gray-500 uppercase">Exp:</span>
-                                            <span className="font-mono text-sm text-white">{skill.years} ans</span>
+                                            <span className="font-mono text-gray-500 uppercase">Exp:</span>
+                                            <span className="font-mono text-base text-white">{skill.years} ans</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-xs text-gray-500 uppercase">Projects:</span>
-                                            <span className="font-mono text-sm text-orange-400">{skill.projects}</span>
+                                            <span className="font-mono text-gray-500 uppercase">Projects:</span>
+                                            <span className="font-mono text-base text-blue-300">{skill.projects}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -160,35 +160,35 @@ export default function SkillsSection() {
                         <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-white/20"></div>
                     </div>
 
-                    {/* AI & Machine Learning */}
+                    {/* Programmation */}
                     <div
-                        ref={aiReveal.ref}
-                        className={`relative bg-black/40 backdrop-blur-sm border border-white/20 p-6 lg:p-8 hover:border-orange-400/50 transition-all duration-500 scroll-reveal scroll-reveal-delay-3 ${aiReveal.isVisible ? 'visible' : ''}`}
+                        ref={programmationReveal.ref}
+                        className={`relative bg-black/40 backdrop-blur-sm border border-white/20 p-6 lg:p-8 hover:border-blue-300/50 transition-all duration-500 scroll-reveal scroll-reveal-delay-3 ${programmationReveal.isVisible ? 'visible' : ''}`}
                     >
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                            <h3 className="font-mono text-sm text-orange-400 uppercase tracking-widest">AI & Machine Learning</h3>
+                            <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                            <h3 className="font-mono text-base text-blue-300 uppercase tracking-widest">Programmation</h3>
                         </div>
 
                         <div className="space-y-4">
-                            {skills.ai.map((skill, index) => (
+                            {skills.programmation.map((skill, index) => (
                                 <div key={skill.name} className="group">
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-3">
-                                            <span className="font-mono text-sm text-gray-500">{String(index + 1).padStart(2, '0')}</span>
-                                            <span className="text-lg lg:text-xl font-bold text-white font-chakra-petch group-hover:text-orange-400 transition-colors">
+                                            <span className="font-mono text-gray-500">{String(index + 1).padStart(2, '0')}</span>
+                                            <span className="text-lg lg:text-2xl font-bold text-white font-chakra-petch group-hover:text-blue-300 transition-colors">
                                                 {skill.name}
                                             </span>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-4 ml-8">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-xs text-gray-500 uppercase">Exp:</span>
-                                            <span className="font-mono text-sm text-white">{skill.years} an{skill.years > '1' ? 's' : ''}</span>
+                                            <span className="font-mono text-gray-500 uppercase">Exp:</span>
+                                            <span className="font-mono text-base text-white">{skill.years} an{skill.years > '1' ? 's' : ''}</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-xs text-gray-500 uppercase">Projects:</span>
-                                            <span className="font-mono text-sm text-orange-400">{skill.projects}</span>
+                                            <span className="font-mono text-gray-500 uppercase">Projects:</span>
+                                            <span className="font-mono text-base text-blue-300">{skill.projects}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -199,35 +199,35 @@ export default function SkillsSection() {
                         <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-white/20"></div>
                     </div>
 
-                    {/* DevOps & Tools */}
+                    {/* Du00e9veloppement Web */}
                     <div
-                        ref={devopsReveal.ref}
-                        className={`relative bg-black/40 backdrop-blur-sm border border-white/20 p-6 lg:p-8 hover:border-orange-400/50 transition-all duration-500 scroll-reveal scroll-reveal-delay-4 ${devopsReveal.isVisible ? 'visible' : ''}`}
+                        ref={devWebReveal.ref}
+                        className={`relative bg-black/40 backdrop-blur-sm border border-white/20 p-6 lg:p-8 hover:border-blue-300/50 transition-all duration-500 scroll-reveal scroll-reveal-delay-4 ${devWebReveal.isVisible ? 'visible' : ''}`}
                     >
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                            <h3 className="font-mono text-sm text-orange-400 uppercase tracking-widest">DevOps & Tools</h3>
+                            <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                            <h3 className="font-mono text-base text-blue-300 uppercase tracking-widest">Du00e9veloppement Web</h3>
                         </div>
 
                         <div className="space-y-4">
-                            {skills.devops.map((skill, index) => (
+                            {skills.devWeb.map((skill, index) => (
                                 <div key={skill.name} className="group">
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-3">
-                                            <span className="font-mono text-sm text-gray-500">{String(index + 1).padStart(2, '0')}</span>
-                                            <span className="text-lg lg:text-xl font-bold text-white font-chakra-petch group-hover:text-orange-400 transition-colors">
+                                            <span className="font-mono text-gray-500">{String(index + 1).padStart(2, '0')}</span>
+                                            <span className="text-lg lg:text-2xl font-bold text-white font-chakra-petch group-hover:text-blue-300 transition-colors">
                                                 {skill.name}
                                             </span>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-4 ml-8">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-xs text-gray-500 uppercase">Exp:</span>
-                                            <span className="font-mono text-sm text-white">{skill.years} ans</span>
+                                            <span className="font-mono text-gray-500 uppercase">Exp:</span>
+                                            <span className="font-mono text-base text-white">{skill.years} ans</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-xs text-gray-500 uppercase">Projects:</span>
-                                            <span className="font-mono text-sm text-orange-400">{skill.projects}</span>
+                                            <span className="font-mono text-gray-500 uppercase">Projects:</span>
+                                            <span className="font-mono text-base text-blue-300">{skill.projects}</span>
                                         </div>
                                     </div>
                                 </div>

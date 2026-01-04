@@ -35,9 +35,9 @@ export default function ContactSection() {
                 {/* HEADER - Centré (12x2) */}
                 <div className="col-span-12 row-span-2 relative border-b border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center px-8 text-center">
                     <div className="flex items-center gap-3 mb-3">
-                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
-                        <span className="font-mono text-[10px] text-orange-400 uppercase tracking-widest">Get In Touch</span>
-                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span>
+                        <span className="font-mono text-sm text-blue-400 uppercase tracking-widest">Get In Touch</span>
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-white leading-[0.9]">
                         CONTACTEZ-MOI
@@ -62,7 +62,7 @@ export default function ContactSection() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-rajdhani text-lg focus:border-orange-400 focus:outline-none transition-colors"
+                                className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-rajdhani text-xl focus:border-blue-400 focus:outline-none transition-colors"
                                 placeholder="Votre nom"
                             />
                         </div>
@@ -78,7 +78,7 @@ export default function ContactSection() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-rajdhani text-lg focus:border-orange-400 focus:outline-none transition-colors"
+                                className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-rajdhani text-xl focus:border-blue-400 focus:outline-none transition-colors"
                                 placeholder="votre@email.com"
                             />
                         </div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
                                 onChange={handleChange}
                                 required
                                 rows={6}
-                                className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-rajdhani text-lg focus:border-orange-400 focus:outline-none transition-colors resize-none"
+                                className="w-full bg-black/60 border border-white/20 px-4 py-3 text-white font-rajdhani text-xl focus:border-blue-400 focus:outline-none transition-colors resize-none"
                                 placeholder="Votre message..."
                             />
                         </div>
@@ -102,10 +102,10 @@ export default function ContactSection() {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="group relative bg-orange-400 text-black font-mono text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-all duration-300 overflow-hidden"
+                            className="group relative bg-blue-400 text-black font-mono text-sm uppercase tracking-widest px-8 py-4 hover:bg-white transition-all duration-300 overflow-hidden"
                         >
                             <span className="relative z-10">Envoyer le message</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </button>
                     </form>
 
@@ -120,28 +120,28 @@ export default function ContactSection() {
                         {/* Email */}
                         <div className="group">
                             <div className="flex items-center gap-3 mb-2">
-                                <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                                <h3 className="font-mono text-xs text-orange-400 uppercase tracking-widest">Email</h3>
+                                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <h3 className="font-mono text-sm text-blue-400 uppercase tracking-widest">Email</h3>
                             </div>
                             <a
-                                href="mailto:adrien.tranchant@example.com"
-                                className="text-xl lg:text-2xl font-bold text-white font-chakra-petch hover:text-orange-400 transition-colors block"
+                                href="mailto:adrien.tranchant@edu.esiea.fr"
+                                className="text-xl lg:text-3xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block"
                             >
-                                adrien.tranchant@example.com
+                                adrien.tranchant@edu.esiea.fr
                             </a>
                         </div>
 
                         {/* LinkedIn */}
                         <div className="group">
                             <div className="flex items-center gap-3 mb-2">
-                                <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                                <h3 className="font-mono text-xs text-orange-400 uppercase tracking-widest">LinkedIn</h3>
+                                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <h3 className="font-mono text-sm text-blue-400 uppercase tracking-widest">LinkedIn</h3>
                             </div>
                             <a
                                 href="https://linkedin.com/in/adrien-tranchant"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xl lg:text-2xl font-bold text-white font-chakra-petch hover:text-orange-400 transition-colors block"
+                                className="text-xl lg:text-3xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block"
                             >
                                 /in/adrien-tranchant
                             </a>
@@ -150,14 +150,14 @@ export default function ContactSection() {
                         {/* GitHub */}
                         <div className="group">
                             <div className="flex items-center gap-3 mb-2">
-                                <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                                <h3 className="font-mono text-xs text-orange-400 uppercase tracking-widest">GitHub</h3>
+                                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <h3 className="font-mono text-sm text-blue-400 uppercase tracking-widest">GitHub</h3>
                             </div>
                             <a
                                 href="https://github.com/ad-tr"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xl lg:text-2xl font-bold text-white font-chakra-petch hover:text-orange-400 transition-colors block"
+                                className="text-xl lg:text-3xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block"
                             >
                                 @ad-tr
                             </a>
@@ -166,10 +166,10 @@ export default function ContactSection() {
                         {/* Location */}
                         <div className="group">
                             <div className="flex items-center gap-3 mb-2">
-                                <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                                <h3 className="font-mono text-xs text-orange-400 uppercase tracking-widest">Location</h3>
+                                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                <h3 className="font-mono text-sm text-blue-400 uppercase tracking-widest">Location</h3>
                             </div>
-                            <div className="text-xl lg:text-2xl font-bold text-white font-chakra-petch">
+                            <div className="text-xl lg:text-3xl font-bold text-white font-chakra-petch">
                                 Paris, France
                             </div>
                         </div>
@@ -180,8 +180,8 @@ export default function ContactSection() {
                                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                                 <h3 className="font-mono text-xs text-green-400 uppercase tracking-widest">Status</h3>
                             </div>
-                            <div className="text-xl lg:text-2xl font-bold text-white font-chakra-petch">
-                                Available for Work
+                            <div className="text-xl lg:text-3xl font-bold text-white font-chakra-petch">
+                                Ouvert aux collaborations
                             </div>
                         </div>
                     </div>

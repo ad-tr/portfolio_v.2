@@ -53,7 +53,7 @@ export default function Footer() {
 
                     {/* Column 2: Navigation */}
                     <div className="lg:pl-12">
-                        <div className="font-mono text-sm text-orange-400 uppercase tracking-widest mb-6">Explore</div>
+                        <div className="font-mono text-base text-blue-400 uppercase tracking-widest mb-6">Explore</div>
                         <nav className="flex flex-col space-y-3">
                             {navigation.map((item) => (
                                 <a
@@ -61,7 +61,7 @@ export default function Footer() {
                                     href={item.href}
                                     className="text-lg font-rajdhani font-medium text-gray-300 hover:text-white transition-colors w-fit group flex items-center gap-2"
                                 >
-                                    <span className="w-0 group-hover:w-2 h-px bg-orange-400 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-px bg-blue-400 transition-all duration-300"></span>
                                     {item.name}
                                 </a>
                             ))}
@@ -70,7 +70,7 @@ export default function Footer() {
 
                     {/* Column 3: Socials */}
                     <div>
-                        <div className="font-mono text-sm text-orange-400 uppercase tracking-widest mb-6">Connect</div>
+                        <div className="font-mono text-base text-blue-400 uppercase tracking-widest mb-6">Connect</div>
                         <div className="flex flex-col space-y-3">
                             {socials.map((social) => (
                                 <a
@@ -80,14 +80,14 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     className="text-lg font-rajdhani font-medium text-gray-300 hover:text-white transition-colors w-fit group flex items-center gap-2"
                                 >
-                                    <span className="w-0 group-hover:w-2 h-px bg-orange-400 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-px bg-blue-400 transition-all duration-300"></span>
                                     {social.name}
                                 </a>
                             ))}
                         </div>
 
                         <div className="mt-8 pt-8 border-t border-white/10">
-                            <a href="mailto:contact@adrien-tranchant.com" className="text-xl lg:text-2xl font-chakra-petch font-bold text-white hover:text-orange-400 transition-colors">
+                            <a href="mailto:contact@adrien-tranchant.com" className="text-xl lg:text-3xl font-chakra-petch font-bold text-white hover:text-blue-400 transition-colors">
                                 contact@adrien.com
                             </a>
                         </div>

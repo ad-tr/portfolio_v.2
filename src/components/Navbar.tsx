@@ -24,7 +24,7 @@ export default function Navbar() {
                         <span className="font-chakra-petch font-bold text-white tracking-widest text-lg md:text-xl">
                             TRANCHANT.AI
                         </span>
-                        <div className="absolute -bottom-1 left-0 w-0 h-px bg-orange-400 group-hover:w-full transition-all duration-300"></div>
+                        <div className="absolute -bottom-1 left-0 w-0 h-px bg-blue-400 group-hover:w-full transition-all duration-300"></div>
                     </Link>
 
                     {/* Navigation Links */}
@@ -38,7 +38,7 @@ export default function Navbar() {
                                 <span className="font-mono text-xs font-bold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-[0.15em] uppercase">
                                     {item}
                                 </span>
-                                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-orange-500 scale-0 group-hover:scale-100 transition-all duration-300"></div>
+                                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-blue-400 scale-0 group-hover:scale-100 transition-all duration-300"></div>
                             </Link>
                         ))}
                     </div>

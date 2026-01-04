@@ -45,7 +45,7 @@ export default function AboutSection() {
 
                     {/* Identity Tag */}
                     <div className="absolute bottom-8 left-8 z-30">
-                        <div className="font-mono text-sm text-orange-400 mb-2">DEVELOPER & CREATOR</div>
+                        <div className="font-mono text-sm text-blue-300 mb-2">ÉTUDIANT & PASSIONNÉ D'IA</div>
                         <div className="text-white font-bold text-2xl lg:text-3xl font-chakra-petch">ADRIEN TRANCHANT</div>
                     </div>
                 </div>
@@ -56,24 +56,21 @@ export default function AboutSection() {
                     {/* Main Heading */}
                     <div className="relative space-y-4">
                         <div className="flex items-center gap-3">
-                            <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
-                            <span className="font-mono text-xs text-orange-400 uppercase tracking-widest">Selected Works</span>
+                            <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
+                            <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Selected Works</span>
                         </div>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-white leading-[0.9] mb-8">
-                            A PROPOS
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-medium tracking-tighter text-white leading-[0.9] mb-8">
+                            À PROPOS
                         </h2>
                     </div>
 
                     {/* Description */}
                     <div className="space-y-4 max-w-xl">
-                        <p className="font-rajdhani text-base lg:text-lg text-gray-300 font-medium leading-relaxed">
-                            I'm a <span className="text-white border-b border-white/30 pb-0.5">full-stack developer</span> passionate about creating beautiful, high-performance applications that solve real problems.
+                        <p className="font-rajdhani text-base lg:text-xl text-gray-300 font-medium leading-relaxed">
+                            Je suis étudiant en <span className="text-white border-b border-white/30 pb-0.5">architecture logicielle à l'ESGI Reims</span>, passionné par l'intelligence artificielle. Sur mon temps libre, j'apprends le deep learning en réimplémentant des concepts pour vraiment comprendre comment ils fonctionnent.
                         </p>
-                        <p className="font-rajdhani text-base lg:text-lg text-gray-300 font-medium leading-relaxed">
-                            From AI-powered tools to immersive web experiences, I love turning complex ideas into elegant solutions that people actually enjoy using.
-                        </p>
-                        <p className="font-mono text-xs lg:text-sm text-neutral-500 leading-relaxed">
-                            Specialized in modern web development, artificial intelligence integration, and creating seamless user experiences.
+                        <p className="font-rajdhani text-base lg:text-xl text-gray-300 font-medium leading-relaxed">
+                            Mon objectif est de poursuivre un PhD en IA pour contribuer à la recherche. J'aime apprendre en faisant, que ce soit en réimplémentant des algorithmes ou en participant à des compétitions.
                         </p>
                     </div>
 
@@ -82,57 +79,37 @@ export default function AboutSection() {
                 </div>
 
                 {/* BLOCK 3: Stat 1 - Bottom Left Quarter (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-white/5 transition-colors cursor-help" title="4+ years of professional development experience">
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="4+ years of professional development experience">
                     <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">04+</div>
-                        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-2">Years Experience</div>
+                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">03+</div>
+                        <div className="text-sm font-mono text-white uppercase tracking-widest mt-2">Années d'apprentissage</div>
                     </div>
                     <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-white/20"></div>
-                    {/* Tooltip */}
-                    <div className="absolute bottom-full mb-2 px-3 py-2 bg-black/90 border border-white/20 text-white text-xs font-mono whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        4+ years building apps
-                    </div>
                 </div>
 
                 {/* BLOCK 4: Stat 2 - Bottom (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-white/5 transition-colors cursor-help" title="25+ completed projects">
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="25+ completed projects">
                     <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">25+</div>
-                        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-2">Projects Completed</div>
-                    </div>
-                    {/* Tooltip */}
-                    <div className="absolute bottom-full mb-2 px-3 py-2 bg-black/90 border border-white/20 text-white text-xs font-mono whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        25+ successful projects
+                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">04+</div>
+                        <div className="text-sm font-mono text-white uppercase tracking-widest mt-2">Projets réalisés</div>
                     </div>
                 </div>
 
                 {/* BLOCK 5: Stat 3 - Bottom (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-white/5 transition-colors cursor-help" title="Commitment to quality and reliability">
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="Commitment to quality and reliability">
                     <div className="text-center">
                         <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">100%</div>
-                        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-2">Dedication</div>
-                    </div>
-                    {/* Tooltip */}
-                    <div className="absolute bottom-full mb-2 px-3 py-2 bg-black/90 border border-white/20 text-white text-xs font-mono whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        Fully committed to quality
+                        <div className="text-sm font-mono text-white uppercase tracking-widest mt-2">Motivation</div>
                     </div>
                 </div>
 
                 {/* BLOCK 6: Status Info - Bottom Right (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group hover:bg-white/5 transition-colors cursor-help" title="Currently available for new projects">
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default mt-4" title="Basé à Reims, France">
                     <div className="text-center space-y-3">
-                        <div className="flex items-center justify-center space-x-2">
-                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                            <span className="font-mono text-sm text-gray-400 uppercase tracking-widest">Available for Work</span>
-                        </div>
-                        <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">PARIS</div>
-                        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest">France</div>
+                        <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">REIMS</div>
+                        <div className="text-sm font-mono text-white uppercase tracking-widest">France</div>
                     </div>
                     <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-white/20"></div>
-                    {/* Tooltip */}
-                    <div className="absolute bottom-full mb-2 px-3 py-2 bg-black/90 border border-white/20 text-white text-xs font-mono whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        Open to new opportunities
-                    </div>
                 </div>
 
             </div>
