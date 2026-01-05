@@ -10,9 +10,8 @@ export default function Footer() {
     ];
 
     const socials = [
-        { name: "LinkedIn", href: "https://linkedin.com/in/adrien-tranchant" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/adrien-tranchant-a42754235/" },
         { name: "GitHub", href: "https://github.com/ad-tr" },
-        { name: "Twitter", href: "https://twitter.com/adrien_tr" }
     ];
 
     return (
@@ -31,29 +30,26 @@ export default function Footer() {
                             <h2 className="text-3xl lg:text-4xl font-bold text-white font-chakra-petch tracking-tight mb-2">
                                 ADRIEN TRANCHANT
                             </h2>
-                            <p className="font-rajdhani text-lg text-gray-400 font-medium max-w-sm">
-                                Creating digital experiences at the intersection of design and artificial intelligence.
+
+                            <p className="font-rajdhani text-lg text-gray-300 font-medium max-w-sm">
+                                Étudiant en architecture logicielle, aspirant chercheur. Mon objectif : contribuer aux futures avancées de l'IA à travers un doctorat.
                             </p>
                         </div>
 
-                        <div className="flex items-center gap-3">
-                            <span className="relative flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                            </span>
-                            <span className="font-mono text-sm text-gray-300 uppercase tracking-widest">
-                                Available for Work
-                            </span>
-                        </div>
-
-                        <div className="font-mono text-xs text-gray-600">
-                            PARIS_FRANCE // 48.8566° N
+                        <div className="border-t border-white/10 pt-2 mt-4">
+                            <div className="font-mono text-xs text-blue-300 uppercase tracking-widest mb-2">Me contacter</div>
+                            <a href="mailto:adrien@tranchant.ai" className="group flex items-center gap-3 w-fit">
+                                <span className="text-xl lg:text-2xl font-chakra-petch font-bold text-white group-hover:text-blue-400 transition-colors">
+                                    adrien@tranchant.ai
+                                </span>
+                                <span className="text-white group-hover:translate-x-1 group-hover:text-blue-400 transition-all">→</span>
+                            </a>
                         </div>
                     </div>
 
                     {/* Column 2: Navigation */}
                     <div className="lg:pl-12">
-                        <div className="font-mono text-base text-blue-300 uppercase tracking-widest mb-6">Explore</div>
+                        <div className="font-mono text-base text-blue-300 uppercase tracking-widest mb-6">Explorer</div>
                         <nav className="flex flex-col space-y-3">
                             {navigation.map((item) => (
                                 <a
@@ -70,7 +66,7 @@ export default function Footer() {
 
                     {/* Column 3: Socials */}
                     <div>
-                        <div className="font-mono text-base text-blue-300 uppercase tracking-widest mb-6">Connect</div>
+                        <div className="font-mono text-base text-blue-300 uppercase tracking-widest mb-6">Mes réseaux</div>
                         <div className="flex flex-col space-y-3">
                             {socials.map((social) => (
                                 <a
@@ -85,12 +81,6 @@ export default function Footer() {
                                 </a>
                             ))}
                         </div>
-
-                        <div className="mt-8 pt-8 border-t border-white/10">
-                            <a href="mailto:contact@adrien-tranchant.com" className="text-xl lg:text-3xl font-chakra-petch font-bold text-white hover:text-blue-400 transition-colors">
-                                contact@adrien.com
-                            </a>
-                        </div>
                     </div>
 
                 </div>
@@ -103,10 +93,10 @@ export default function Footer() {
                         © {currentYear} Adrien Tranchant. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
-                        <a href="#" className="font-mono text-xs text-gray-600 hover:text-gray-400 transition-colors">
+                        <a href="#" className="font-mono text-xs text-gray-600 hover:text-gray-300 transition-colors">
                             Mentions Légales
                         </a>
-                        <a href="#" className="font-mono text-xs text-gray-600 hover:text-gray-400 transition-colors">
+                        <a href="#" className="font-mono text-xs text-gray-600 hover:text-gray-300 transition-colors">
                             Politique de Confidentialité
                         </a>
                     </div>

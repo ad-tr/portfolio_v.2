@@ -41,7 +41,7 @@ export default function Navbar() {
                                     href={`/#${item.toLowerCase()}`}
                                     className="relative group"
                                 >
-                                    <span className="font-mono text-xs font-bold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-[0.15em] uppercase">
+                                    <span className="font-mono text-xs font-bold text-gray-300 group-hover:text-white transition-colors duration-300 tracking-[0.15em] uppercase">
                                         {item}
                                     </span>
                                     <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-blue-400 scale-0 group-hover:scale-100 transition-all duration-300"></div>
@@ -85,7 +85,7 @@ export default function Navbar() {
                                 animation: mobileMenuOpen ? `slideIn 0.5s ease-out ${index * 0.1}s both` : 'none'
                             }}
                         >
-                            <span className="font-mono text-2xl font-bold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-[0.15em] uppercase">
+                            <span className="font-mono text-2xl font-bold text-gray-300 group-hover:text-white transition-colors duration-300 tracking-[0.15em] uppercase">
                                 {item}
                             </span>
                             <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>

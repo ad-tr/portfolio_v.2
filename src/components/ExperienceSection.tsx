@@ -40,10 +40,10 @@ function ExperienceItem({ exp, index }: { exp: any, index: number }) {
                 <div className="font-rajdhani text-lg lg:text-xl text-gray-300 font-medium mb-2">
                     {exp.company || exp.school}
                 </div>
-                <div className="font-mono text-sm text-gray-500 mb-4">
+                <div className="font-mono text-sm text-gray-300 mb-4">
                     📍 {exp.location}
                 </div>
-                <p className="font-rajdhani text-lg lg:text-xl text-gray-400 leading-relaxed mb-6">
+                <p className="font-rajdhani text-lg lg:text-xl text-gray-300 leading-relaxed mb-6">
                     {exp.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -66,34 +66,34 @@ export default function ExperienceSection() {
     const imageParallax = useParallax({ speed: 1.5 });
     const experiences = [
         {
-            year: "2025",
-            title: "Projets d'Apprentissage en IA",
-            company: "Projets personnels",
-            location: "Remote",
-            description: "J'apprends le deep learning en réimplémentant des concepts : modèle type GPT, tokenizer BPE, réseaux de neurones. Mon objectif est de comprendre comment tout fonctionne en profondeur.",
-            technologies: ["Python", "PyTorch", "Transformers", "NumPy"]
+            year: "2021-2026",
+            title: "Alternance Développeur",
+            company: "Carbono",
+            location: "Reims, France",
+            description: "Alternance pendant 4 ans chez Carbono à Reims, où j'ai pu développer mes compétences en développement web et mettre en pratique mes connaissances en développement logiciel.",
+            technologies: ["JavaScript", "TypeScript", "React"]
         },
         {
-            year: "2023",
-            title: "Challenges Kaggle",
-            company: "Apprentissage pratique",
-            location: "Remote",
-            description: "Je participe à des compétitions machine learning pour pratiquer l'analyse de données et l'optimisation de modèles. C'est une bonne façon d'apprendre en résolvant des problèmes réels.",
-            technologies: ["Python", "Scikit-Learn", "Pandas", "NumPy"]
+            year: "2025-2027",
+            title: "Master Architecture des Logiciels",
+            school: "ESGI Reims",
+            location: "Reims, France",
+            description: "Suite à ma formation en Bachelor Architecture des Logiciels, pour approfondir mes connaissances en développement logiciel et systèmes d'information.",
+            technologies: ["JavaScript", "TypeScript", "Next.js", "Et d'autres.."]
         },
         {
-            year: "2022",
+            year: "2022-2025",
             title: "Bachelor Architecture des Logiciels",
             school: "ESGI Reims",
             location: "Reims, France",
             description: "Formation en développement logiciel, bases de données et systèmes d'information. Une base solide pour comprendre l'ingénierie derrière l'IA.",
-            technologies: ["JavaScript", "TypeScript", "Next.js", "SQL"]
+            technologies: ["JavaScript", "TypeScript", "Next.js", "Et d'autres.."]
         },
         {
             year: "2022",
             title: "Baccalauréat",
             school: "Lycée",
-            location: "France",
+            location: "Epernay, France",
             description: "Spécialités Physique-Chimie et NSI (Numérique Sciences Informatiques). Mes premiers pas en programmation et algorithmique.",
             technologies: ["Python", "Algorithmes", "Mathématiques"]
         }

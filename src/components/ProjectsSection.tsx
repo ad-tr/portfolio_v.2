@@ -45,19 +45,19 @@ export default function ProjectsSection() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12">
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">03</div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Modèles entrainés</div>
+                            <div className="text-sm font-mono text-gray-300 uppercase tracking-widest mt-1">Modèles entrainés</div>
                         </div>
                         <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">{String(projects.length).padStart(2, '0')}</div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
+                            <div className="text-sm font-mono text-gray-300 uppercase tracking-widest mt-1">Projets</div>
                         </div>
                         <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="flex items-center justify-center gap-2">
                                 <span className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">01</span>
                             </div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Modèle Fine-Tuné</div>
+                            <div className="text-sm font-mono text-gray-300 uppercase tracking-widest mt-1">Modèle Fine-Tuné</div>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,6 @@ export default function ProjectsSection() {
 
                                     {/* Tech Stack */}
                                     <div className="mb-6">
-                                        <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Tech Stack</div>
                                         <div className="flex flex-wrap gap-2">
                                             {project.tech.map((tech) => (
                                                 <span
