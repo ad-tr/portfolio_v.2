@@ -22,9 +22,8 @@ export default function Navbar() {
                     {/* Branding */}
                     <Link href="/" className="group relative">
                         <span className="font-chakra-petch font-bold text-white tracking-widest text-lg md:text-xl">
-                            TRANCHANT.AI
+                            tranchant.ai
                         </span>
-                        <div className="absolute -bottom-1 left-0 w-0 h-px bg-blue-400 group-hover:w-full transition-all duration-300"></div>
                     </Link>
 
                     {/* Navigation Links */}
@@ -32,7 +31,7 @@ export default function Navbar() {
                         {['PROJECTS', 'EXPERIENCE', 'SKILLS', 'ABOUT', 'CONTACT'].map((item) => (
                             <Link
                                 key={item}
-                                href={`#${item.toLowerCase()}`}
+                                href={`/#${item.toLowerCase()}`}
                                 className="relative group"
                             >
                                 <span className="font-mono text-xs font-bold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-[0.15em] uppercase">

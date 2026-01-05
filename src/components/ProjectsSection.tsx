@@ -2,70 +2,20 @@
 
 import Image from "next/image";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { projectsData } from "@/data/projects";
 
 export default function ProjectsSection() {
-    const projects = [
-        {
-            id: "001",
-            title: "AI Vision System",
-            category: "Computer Vision",
-            year: "2024",
-            description: "Intelligent image recognition platform for real-time visual analysis and automated quality control.",
-            tech: ["Python", "TensorFlow", "OpenCV"],
-            image: "/images/hero.jpg",
-            link: "#"
-        },
-        {
-            id: "002",
-            title: "Smart Chat Assistant",
-            category: "LLM Application",
-            year: "2024",
-            description: "Conversational AI with context understanding and intelligent responses for customer support.",
-            tech: ["Next.js", "GPT-4", "Vector DB"],
-            image: "/images/about.jpg",
-            link: "#"
-        },
-        {
-            id: "003",
-            title: "Automation Agent",
-            category: "AI Agents",
-            year: "2023",
-            description: "Autonomous system handling complex workflows automatically without human intervention.",
-            tech: ["TypeScript", "LangChain", "Redis"],
-            image: "/images/hero.jpg",
-            link: "#"
-        },
-        {
-            id: "004",
-            title: "Data Analytics Dashboard",
-            category: "Data Visualization",
-            year: "2023",
-            description: "Real-time analytics platform with interactive charts and predictive insights.",
-            tech: ["React", "D3.js", "Python"],
-            image: "/images/about.jpg",
-            link: "#"
-        },
-        {
-            id: "005",
-            title: "E-commerce Platform",
-            category: "Full Stack",
-            year: "2023",
-            description: "Modern e-commerce solution with AI-powered recommendations and seamless checkout.",
-            tech: ["Next.js", "Stripe", "PostgreSQL"],
-            image: "/images/hero.jpg",
-            link: "#"
-        },
-        {
-            id: "006",
-            title: "Mobile Fitness App",
-            category: "Mobile Development",
-            year: "2023",
-            description: "Cross-platform fitness tracking app with personalized workout plans.",
-            tech: ["React Native", "Firebase", "TensorFlow"],
-            image: "/images/about.jpg",
-            link: "#"
-        }
-    ];
+    // Convert projectsData object to array format for display
+    const projects = Object.entries(projectsData).map(([slug, project], index) => ({
+        id: String(index + 1).padStart(3, '0'),
+        title: project.title,
+        category: project.category,
+        year: project.year,
+        description: project.shortDescription,
+        tech: project.technologies,
+        image: index % 2 === 0 ? "/images/hero.jpg" : "/images/about.jpg",
+        link: `/projects/${slug}`
+    }));
 
     return (
         <section id="projects" className="relative w-full min-h-screen bg-black py-20 lg:py-20">
@@ -80,13 +30,13 @@ export default function ProjectsSection() {
                 <div className="text-center mb-16 lg:mb-24">
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
-                        <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Selected Works</span>
+                        <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Mes réalisations</span>
                         <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-medium tracking-tighter text-white leading-[0.9] mb-6">
                         MES PROJETS
                     </h2>
-                    <p className="font-rajdhani text-base lg:text-xl text-gray-400 font-medium max-w-2xl mx-auto mb-8">
+                    <p className="font-rajdhani text-base lg:text-xl text-gray-300 font-medium max-w-2xl mx-auto mb-8">
                         Mes projets d'apprentissage en intelligence artificielle. Je réimplémente des concepts et participe à des challenges pour apprendre.
                     </p>
 
@@ -94,25 +44,25 @@ export default function ProjectsSection() {
                     <div className="flex items-center justify-center gap-8 lg:gap-12">
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">{String(projects.length).padStart(2, '0')}</div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projects</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
                         </div>
                         <div className="w-px h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">2024</div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Latest</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Récent</div>
                         </div>
                         <div className="w-px h-8 bg-white/20"></div>
                         <div className="text-center">
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center justify-center gap-2">
                                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                <span className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">Active</span>
+                                <span className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">Actif</span>
                             </div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Status</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Statut</div>
                         </div>
                     </div>
                 </div>
 
-                {/* Projects Grid - 3 colonnes */}
+                {/* Projets Grid - 3 colonnes */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
                     {projects.map((project, index) => {
                         const cardReveal = useScrollReveal({ threshold: 0.2 });
@@ -173,12 +123,12 @@ export default function ProjectsSection() {
                                         </div>
                                     </div>
 
-                                    {/* View Project Link */}
+                                    {/* Voir le projet Link */}
                                     <a
                                         href={project.link}
                                         className="inline-flex items-center gap-2 text-sm font-mono text-blue-300 hover:text-white transition-colors group/link"
                                     >
-                                        <span>View Project</span>
+                                        <span>Voir le projet</span>
                                         <span className="group-hover/link:translate-x-1 transition-transform">→</span>
                                     </a>
 

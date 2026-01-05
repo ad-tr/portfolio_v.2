@@ -36,7 +36,7 @@ export default function ContactSection() {
                 <div className="col-span-12 row-span-2 relative border-b border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center px-8 text-center">
                     <div className="flex items-center gap-3 mb-3">
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span>
-                        <span className="font-mono text-sm text-blue-400 uppercase tracking-widest">Get In Touch</span>
+                        <span className="font-mono text-sm text-blue-400 uppercase tracking-widest">Restons en contact</span>
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-white leading-[0.9]">

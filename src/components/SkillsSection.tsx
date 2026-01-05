@@ -49,7 +49,7 @@ export default function SkillsSection() {
                 <div ref={headerReveal.ref} className={`text-center mb-16 lg:mb-24 scroll-reveal ${headerReveal.isVisible ? 'visible' : ''}`}>
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
-                        <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Technical Stack</span>
+                        <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Stack technique</span>
                         <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-medium tracking-tighter text-white leading-[0.9] mb-6">
@@ -97,7 +97,7 @@ export default function SkillsSection() {
                                 <div key={skill.name} className="group">
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-3">
-                                            <span className="font-mono text-gray-500">{String(index + 1).padStart(2, '0')}</span>
+                                            <span className="font-mono text-gray-500">{""}</span>
                                             <span className="text-lg lg:text-2xl font-bold text-white font-chakra-petch group-hover:text-blue-300 transition-colors">
                                                 {skill.name}
                                             </span>
@@ -105,11 +105,11 @@ export default function SkillsSection() {
                                     </div>
                                     <div className="flex items-center gap-4 ml-8">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-gray-500 uppercase">Exp:</span>
+                                            <span className="font-mono text-gray-500 uppercase">Expérience:</span>
                                             <span className="font-mono text-base text-white">{skill.years} ans</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-gray-500 uppercase">Projects:</span>
+                                            <span className="font-mono text-gray-500 uppercase">Projets:</span>
                                             <span className="font-mono text-base text-blue-300">{skill.projects}</span>
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@ export default function SkillsSection() {
                                 <div key={skill.name} className="group">
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-3">
-                                            <span className="font-mono text-gray-500">{String(index + 1).padStart(2, '0')}</span>
+                                            <span className="font-mono text-gray-500">{""}</span>
                                             <span className="text-lg lg:text-2xl font-bold text-white font-chakra-petch group-hover:text-blue-300 transition-colors">
                                                 {skill.name}
                                             </span>
@@ -144,11 +144,11 @@ export default function SkillsSection() {
                                     </div>
                                     <div className="flex items-center gap-4 ml-8">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-gray-500 uppercase">Exp:</span>
+                                            <span className="font-mono text-gray-500 uppercase">Expérience:</span>
                                             <span className="font-mono text-base text-white">{skill.years} ans</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-gray-500 uppercase">Projects:</span>
+                                            <span className="font-mono text-gray-500 uppercase">Projets:</span>
                                             <span className="font-mono text-base text-blue-300">{skill.projects}</span>
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@ export default function SkillsSection() {
                                 <div key={skill.name} className="group">
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-3">
-                                            <span className="font-mono text-gray-500">{String(index + 1).padStart(2, '0')}</span>
+                                            <span className="font-mono text-gray-500">{""}</span>
                                             <span className="text-lg lg:text-2xl font-bold text-white font-chakra-petch group-hover:text-blue-300 transition-colors">
                                                 {skill.name}
                                             </span>
@@ -183,11 +183,11 @@ export default function SkillsSection() {
                                     </div>
                                     <div className="flex items-center gap-4 ml-8">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-gray-500 uppercase">Exp:</span>
+                                            <span className="font-mono text-gray-500 uppercase">Expérience:</span>
                                             <span className="font-mono text-base text-white">{skill.years} an{skill.years > '1' ? 's' : ''}</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-gray-500 uppercase">Projects:</span>
+                                            <span className="font-mono text-gray-500 uppercase">Projets:</span>
                                             <span className="font-mono text-base text-blue-300">{skill.projects}</span>
                                         </div>
                                     </div>
@@ -214,7 +214,7 @@ export default function SkillsSection() {
                                 <div key={skill.name} className="group">
                                     <div className="flex items-center justify-between mb-2">
                                         <div className="flex items-center gap-3">
-                                            <span className="font-mono text-gray-500">{String(index + 1).padStart(2, '0')}</span>
+                                            <span className="font-mono text-gray-500">{""}</span>
                                             <span className="text-lg lg:text-2xl font-bold text-white font-chakra-petch group-hover:text-blue-300 transition-colors">
                                                 {skill.name}
                                             </span>
@@ -222,11 +222,11 @@ export default function SkillsSection() {
                                     </div>
                                     <div className="flex items-center gap-4 ml-8">
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-gray-500 uppercase">Exp:</span>
+                                            <span className="font-mono text-gray-500 uppercase">Expérience:</span>
                                             <span className="font-mono text-base text-white">{skill.years} ans</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="font-mono text-gray-500 uppercase">Projects:</span>
+                                            <span className="font-mono text-gray-500 uppercase">Projets:</span>
                                             <span className="font-mono text-base text-blue-300">{skill.projects}</span>
                                         </div>
                                     </div>

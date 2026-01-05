@@ -29,7 +29,7 @@ export default function HeroSection() {
                         src="/images/hero.jpg"
                         alt="Hero Background"
                         fill
-                        className="object-cover opacity-60"
+                        className="object-cover opacity-100"
                         priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20" />

@@ -42,12 +42,6 @@ export default function AboutSection() {
 
                     {/* HUD Corner */}
                     <div className="absolute top-8 right-8 w-20 h-20 border-t border-r border-white/50 z-30"></div>
-
-                    {/* Identity Tag */}
-                    <div className="absolute bottom-8 left-8 z-30">
-                        <div className="font-mono text-sm text-blue-300 mb-2">ÉTUDIANT & PASSIONNÉ D'IA</div>
-                        <div className="text-white font-bold text-2xl lg:text-3xl font-chakra-petch">ADRIEN TRANCHANT</div>
-                    </div>
                 </div>
 
                 {/* BLOCK 2: Main Content - Top Right (6x8) */}
@@ -57,7 +51,7 @@ export default function AboutSection() {
                     <div className="relative space-y-4">
                         <div className="flex items-center gap-3">
                             <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
-                            <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Selected Works</span>
+                            <span className="font-mono text-xs text-blue-300 uppercase tracking-widest">Qui suis-je</span>
                         </div>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-medium tracking-tighter text-white leading-[0.9] mb-8">
                             À PROPOS
@@ -82,7 +76,7 @@ export default function AboutSection() {
                 <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="4+ years of professional development experience">
                     <div className="text-center">
                         <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">03+</div>
-                        <div className="text-sm font-mono text-white uppercase tracking-widest mt-2">Années d'apprentissage</div>
+                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Années d'apprentissage</div>
                     </div>
                     <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-white/20"></div>
                 </div>
@@ -91,15 +85,15 @@ export default function AboutSection() {
                 <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="25+ completed projects">
                     <div className="text-center">
                         <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">04+</div>
-                        <div className="text-sm font-mono text-white uppercase tracking-widest mt-2">Projets réalisés</div>
+                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Projets réalisés</div>
                     </div>
                 </div>
 
                 {/* BLOCK 5: Stat 3 - Bottom (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="Commitment to quality and reliability">
+                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="Technologies apprises">
                     <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">100%</div>
-                        <div className="text-sm font-mono text-white uppercase tracking-widest mt-2">Motivation</div>
+                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">12+</div>
+                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Technologies</div>
                     </div>
                 </div>
 
@@ -107,7 +101,7 @@ export default function AboutSection() {
                 <div className="col-span-6 lg:col-span-3 row-span-4 relative bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default mt-4" title="Basé à Reims, France">
                     <div className="text-center space-y-3">
                         <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">REIMS</div>
-                        <div className="text-sm font-mono text-white uppercase tracking-widest">France</div>
+                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest">France</div>
                     </div>
                     <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-white/20"></div>
                 </div>
