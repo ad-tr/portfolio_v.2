@@ -13,12 +13,12 @@ function ExperienceItem({ exp, index }: { exp: any, index: number }) {
             className={`col-span-12 grid grid-cols-12 border-b border-white/20 scroll-reveal scroll-reveal-delay-${(index % 3) + 1} ${reveal.isVisible ? 'visible' : ''}`}
         >
             {/* Date Block - Always on left */}
-            <div className={`col-span-12 lg:col-span-3 relative border-r border-white/20 ${index % 2 === 0 ? 'bg-black/40' : 'bg-black/60'
-                } backdrop-blur-sm p-8 lg:p-12 flex items-center justify-center overflow-hidden`}>
+            <div className={`col-span-12 lg:col-span-3 relative lg:border-r border-b border-white/20 ${index % 2 === 0 ? 'bg-black/40' : 'bg-black/60'
+                } backdrop-blur-sm p-6 sm:p-8 lg:p-12 flex items-center justify-center overflow-hidden`}>
 
                 {/* Background Large Year */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-                    <span className="text-[6rem] font-bold text-white/9 font-chakra-petch leading-none blur-[2px] transform scale-150">
+                    <span className="text-[4rem] sm:text-[6rem] font-bold text-white/9 font-chakra-petch leading-none blur-[2px] transform scale-150">
                         {exp.year}
                     </span>
                 </div>
@@ -33,7 +33,7 @@ function ExperienceItem({ exp, index }: { exp: any, index: number }) {
 
             {/* Content Block - Always on right */}
             <div className={`col-span-12 lg:col-span-9 relative ${index % 2 === 0 ? 'bg-black/60' : 'bg-black/40'
-                } backdrop-blur-sm p-8 lg:p-12 flex flex-col justify-center`}>
+                } backdrop-blur-sm p-6 sm:p-8 lg:p-12 flex flex-col justify-center`}>
                 <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-3 hover:text-blue-400 transition-colors">
                     {exp.title}
                 </h3>
@@ -111,7 +111,7 @@ export default function ExperienceSection() {
 
                 {/* IMAGE BLOCK (5x6) - Like About Section */}
                 {/* IMAGE BLOCK (5x6) - Like About Section */}
-                <div ref={imageParallax.ref} className="col-span-12 lg:col-span-5 lg:row-span-6 relative border-r border-b border-white/20 bg-black/40 backdrop-blur-sm overflow-hidden h-[70vh]">
+                <div ref={imageParallax.ref} className="col-span-12 lg:col-span-5 lg:row-span-6 relative lg:border-r border-b border-white/20 bg-black/40 backdrop-blur-sm overflow-hidden h-[50vh] lg:h-[70vh]">
                     <div
                         style={{
                             transform: `translateY(${imageParallax.transform.y}px) scale(${imageParallax.transform.scale})`,
@@ -131,7 +131,7 @@ export default function ExperienceSection() {
                 </div>
 
                 {/* TEXT BLOCK (7x6) - Like About Section */}
-                <div className="col-span-12 lg:col-span-7 lg:row-span-6 relative border-b border-white/20 bg-black/60 backdrop-blur-sm p-8 lg:p-12 xl:p-20 flex flex-col justify-center">
+                <div className="col-span-12 lg:col-span-7 lg:row-span-6 relative border-b border-white/20 bg-black/60 backdrop-blur-sm p-6 sm:p-8 lg:p-12 xl:p-20 flex flex-col justify-center">
                     <div className="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">Professional Journey</div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-white leading-[0.9] mb-6">
                         PARCOURS
@@ -139,7 +139,7 @@ export default function ExperienceSection() {
                     <p className="font-rajdhani text-base lg:text-xl text-gray-300 font-medium leading-relaxed mb-8">
                         Mon parcours d'apprentissage en intelligence artificielle. Des premiers réseaux de neurones aux modèles de langage, j'apprends en réimplémentant et en pratiquant.
                     </p>
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         <div>
                             <div className="text-3xl lg:text-4xl font-bold text-blue-400 font-chakra-petch">4+</div>
                             <div className="text-base font-mono text-gray-500 uppercase tracking-widest mt-1">Années</div>

@@ -23,17 +23,17 @@ export default function ContactSection() {
     };
 
     return (
-        <section id="contact" className="relative w-full h-screen bg-black overflow-hidden border-t border-white/20">
+        <section id="contact" className="relative w-full min-h-screen lg:h-screen bg-black overflow-hidden border-t border-white/20">
             {/* Background Grid */}
             <div className="absolute top-0 left-0 w-full h-full z-0 opacity-20 pointer-events-none">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:100px_100px]" />
             </div>
 
             {/* Main Grid Layout - 12x12 */}
-            <div className="w-full max-w-[2500px] h-full mx-auto grid grid-cols-12 grid-rows-12 relative z-10">
+            <div className="w-full max-w-[2500px] h-full mx-auto grid grid-cols-12 auto-rows-auto relative z-10">
 
                 {/* HEADER - Centré (12x2) */}
-                <div className="col-span-12 row-span-2 relative border-b border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center px-8 text-center">
+                <div className="col-span-12 relative border-b border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center px-6 sm:px-8 py-8 sm:py-12 text-center">
                     <div className="flex items-center gap-3 mb-3">
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span>
                         <span className="font-mono text-sm text-blue-400 uppercase tracking-widest">Restons en contact</span>
@@ -49,8 +49,8 @@ export default function ContactSection() {
                 </div>
 
                 {/* FORM BLOCK (7x10) */}
-                <div className="col-span-12 lg:col-span-7 row-span-10 relative border-r border-white/20 bg-black/40 backdrop-blur-sm p-6 lg:p-12">
-                    <form onSubmit={handleSubmit} className="h-full flex flex-col justify-center max-w-2xl">
+                <div className="col-span-12 lg:col-span-7 relative lg:border-r border-b lg:border-b-0 border-white/20 bg-black/40 backdrop-blur-sm p-6 sm:p-8 lg:p-12">
+                    <form onSubmit={handleSubmit} className="h-full flex flex-col justify-center max-w-2xl mx-auto lg:mx-0">
                         {/* Name Input */}
                         <div className="mb-6">
                             <label className="block font-mono text-xs text-gray-500 uppercase tracking-widest mb-3">
@@ -115,7 +115,7 @@ export default function ContactSection() {
                 </div>
 
                 {/* CONTACT INFO BLOCK (5x10) */}
-                <div className="col-span-12 lg:col-span-5 row-span-10 relative bg-black/60 backdrop-blur-sm p-6 lg:p-12 flex flex-col justify-center">
+                <div className="col-span-12 lg:col-span-5 relative bg-black/60 backdrop-blur-sm p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
                     <div className="space-y-8">
                         {/* Email */}
                         <div className="group">
@@ -125,7 +125,7 @@ export default function ContactSection() {
                             </div>
                             <a
                                 href="mailto:adrien.tranchant@edu.esiea.fr"
-                                className="text-xl lg:text-3xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block"
+                                className="text-base sm:text-xl lg:text-2xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block break-all"
                             >
                                 adrien.tranchant@edu.esiea.fr
                             </a>
@@ -141,7 +141,7 @@ export default function ContactSection() {
                                 href="https://linkedin.com/in/adrien-tranchant"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xl lg:text-3xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block"
+                                className="text-base sm:text-xl lg:text-2xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block"
                             >
                                 /in/adrien-tranchant
                             </a>
@@ -157,7 +157,7 @@ export default function ContactSection() {
                                 href="https://github.com/ad-tr"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xl lg:text-3xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block"
+                                className="text-base sm:text-xl lg:text-2xl font-bold text-white font-chakra-petch hover:text-blue-400 transition-colors block"
                             >
                                 @ad-tr
                             </a>
@@ -169,7 +169,7 @@ export default function ContactSection() {
                                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                                 <h3 className="font-mono text-sm text-blue-400 uppercase tracking-widest">Location</h3>
                             </div>
-                            <div className="text-xl lg:text-3xl font-bold text-white font-chakra-petch">
+                            <div className="text-base sm:text-xl lg:text-3xl font-bold text-white font-chakra-petch">
                                 Paris, France
                             </div>
                         </div>
@@ -180,7 +180,7 @@ export default function ContactSection() {
                                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                                 <h3 className="font-mono text-xs text-green-400 uppercase tracking-widest">Status</h3>
                             </div>
-                            <div className="text-xl lg:text-3xl font-bold text-white font-chakra-petch">
+                            <div className="text-base sm:text-xl lg:text-3xl font-bold text-white font-chakra-petch">
                                 Ouvert aux collaborations
                             </div>
                         </div>

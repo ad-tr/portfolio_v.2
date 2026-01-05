@@ -10,7 +10,7 @@ export default function AboutSection() {
     const imageParallax = useParallax({ speed: 0.3 });
 
     return (
-        <section id="about" className="relative w-full h-screen bg-black overflow-hidden border-t border-white/20">
+        <section id="about" className="relative w-full min-h-screen lg:h-screen bg-black overflow-hidden border-t border-white/20">
 
             {/* Background Grid */}
             <div className="absolute top-0 left-0 w-full h-full z-0 opacity-20 pointer-events-none">
@@ -18,10 +18,10 @@ export default function AboutSection() {
             </div>
 
             {/* Main Grid Layout - Asymmetric Blocks */}
-            <div className="w-full max-w-[2500px] h-full mx-auto grid grid-cols-12 grid-rows-12 relative z-10">
+            <div className="w-full max-w-[2500px] h-full mx-auto grid grid-cols-12 auto-rows-auto relative z-10">
 
                 {/* BLOCK 1: Large Image - Top Left (6x8) */}
-                <div ref={imageParallax.ref} className="col-span-12 lg:col-span-6 row-span-8 relative border-r border-b border-white/20 overflow-hidden group">
+                <div ref={imageParallax.ref} className="col-span-12 lg:col-span-6 lg:row-span-8 relative lg:border-r border-b border-white/20 overflow-hidden group min-h-[50vh] lg:min-h-0">
                     <div
                         style={{
                             transform: `translateY(${imageParallax.transform.y}px) scale(${imageParallax.transform.scale})`,
@@ -45,7 +45,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* BLOCK 2: Main Content - Top Right (6x8) */}
-                <div ref={contentReveal.ref} className={`col-span-12 lg:col-span-6 row-span-8 relative border-b border-white/20 bg-black/40 backdrop-blur-sm flex flex-col justify-center px-8 lg:px-12 xl:px-16 py-12 lg:py-0 scroll-reveal ${contentReveal.isVisible ? 'visible' : ''}`}>
+                <div ref={contentReveal.ref} className={`col-span-12 lg:col-span-6 lg:row-span-8 relative border-b border-white/20 bg-black/40 backdrop-blur-sm flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 py-12 lg:py-0 scroll-reveal ${contentReveal.isVisible ? 'visible' : ''}`}>
 
                     {/* Main Heading */}
                     <div className="relative space-y-4">
@@ -73,7 +73,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* BLOCK 3: Stat 1 - Bottom Left Quarter (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="4+ years of professional development experience">
+                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="4+ years of professional development experience">
                     <div className="text-center">
                         <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">03+</div>
                         <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Années d'apprentissage</div>
@@ -82,7 +82,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* BLOCK 4: Stat 2 - Bottom (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="25+ completed projects">
+                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="25+ completed projects">
                     <div className="text-center">
                         <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">04+</div>
                         <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Projets réalisés</div>
@@ -90,7 +90,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* BLOCK 5: Stat 3 - Bottom (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default" title="Technologies apprises">
+                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="Technologies apprises">
                     <div className="text-center">
                         <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">12+</div>
                         <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Technologies</div>
@@ -98,7 +98,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* BLOCK 6: Status Info - Bottom Right (3x4) */}
-                <div className="col-span-6 lg:col-span-3 row-span-4 relative bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default mt-4" title="Basé à Reims, France">
+                <div className="col-span-6 md:col-span-3 relative bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="Basé à Reims, France">
                     <div className="text-center space-y-3">
                         <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">REIMS</div>
                         <div className="text-sm font-mono text-blue-300 uppercase tracking-widest">France</div>

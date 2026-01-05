@@ -41,17 +41,17 @@ export default function ProjectsSection() {
                     </p>
 
                     {/* Stats */}
-                    <div className="flex items-center justify-center gap-8 lg:gap-12">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12">
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">{String(projects.length).padStart(2, '0')}</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
                         </div>
-                        <div className="w-px h-8 bg-white/20"></div>
+                        <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">2024</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Récent</div>
                         </div>
-                        <div className="w-px h-8 bg-white/20"></div>
+                        <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="flex items-center justify-center gap-2">
                                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>

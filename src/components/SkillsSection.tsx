@@ -60,17 +60,17 @@ export default function SkillsSection() {
                     </p>
 
                     {/* Stats */}
-                    <div className="flex items-center justify-center gap-8 lg:gap-12">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12">
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">4+</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Années</div>
                         </div>
-                        <div className="w-px h-8 bg-white/20"></div>
+                        <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">12</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Technologies</div>
                         </div>
-                        <div className="w-px h-8 bg-white/20"></div>
+                        <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-blue-300 font-chakra-petch">25+</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
@@ -103,7 +103,7 @@ export default function SkillsSection() {
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-4 ml-8">
+                                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                                         <div className="flex items-center gap-2">
                                             <span className="font-mono text-gray-500 uppercase">Expérience:</span>
                                             <span className="font-mono text-base text-white">{skill.years} ans</span>
@@ -142,7 +142,7 @@ export default function SkillsSection() {
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-4 ml-8">
+                                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                                         <div className="flex items-center gap-2">
                                             <span className="font-mono text-gray-500 uppercase">Expérience:</span>
                                             <span className="font-mono text-base text-white">{skill.years} ans</span>
@@ -181,7 +181,7 @@ export default function SkillsSection() {
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-4 ml-8">
+                                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                                         <div className="flex items-center gap-2">
                                             <span className="font-mono text-gray-500 uppercase">Expérience:</span>
                                             <span className="font-mono text-base text-white">{skill.years} an{skill.years > '1' ? 's' : ''}</span>
@@ -220,7 +220,7 @@ export default function SkillsSection() {
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-4 ml-8">
+                                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                                         <div className="flex items-center gap-2">
                                             <span className="font-mono text-gray-500 uppercase">Expérience:</span>
                                             <span className="font-mono text-base text-white">{skill.years} ans</span>

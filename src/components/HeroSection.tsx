@@ -37,7 +37,7 @@ export default function HeroSection() {
             </div>
 
             {/* Main Content - Centered */}
-            <div className="flex-1 flex flex-col justify-center items-center relative z-10 w-full max-w-5xl mx-auto px-6 mt-20 lg:mt-0">
+            <div className="flex-1 flex flex-col justify-center items-center relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 mt-16 sm:mt-20 lg:mt-0">
 
                 <div ref={contentReveal.ref} className={`flex flex-col items-center text-center space-y-6 lg:space-y-8 scroll-reveal ${contentReveal.isVisible ? 'visible' : ''}`}>
 
@@ -69,7 +69,7 @@ export default function HeroSection() {
 
             {/* Bottom Status Bar */}
             <div className="w-full border-t border-white/20 z-20 bg-black/60 backdrop-blur-sm relative">
-                <div className="w-full max-w-[2500px] mx-auto flex h-20 md:h-30 items-center px-6 lg:px-12">
+                <div className="w-full max-w-[2500px] mx-auto flex h-16 sm:h-20 md:h-30 items-center px-4 sm:px-6 lg:px-12">
 
                     {/* Left Stat */}
                     <div className="hidden md:flex flex-1 flex-col items-center justify-center">
