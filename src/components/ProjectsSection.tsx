@@ -14,7 +14,8 @@ export default function ProjectsSection() {
         description: project.shortDescription,
         tech: project.technologies,
         image: index % 2 === 0 ? "/images/hero.jpg" : "/images/about.jpg",
-        link: `/projects/${slug}`
+        github: project.github,
+        kaggle: project.kaggle
     }));
 
     return (
@@ -43,21 +44,20 @@ export default function ProjectsSection() {
                     {/* Stats */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12">
                         <div className="text-center">
+                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">03</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Modèles entrainés</div>
+                        </div>
+                        <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
+                        <div className="text-center">
                             <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">{String(projects.length).padStart(2, '0')}</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
                         </div>
                         <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
-                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">2024</div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Récent</div>
-                        </div>
-                        <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
-                        <div className="text-center">
                             <div className="flex items-center justify-center gap-2">
-                                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                <span className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">Actif</span>
+                                <span className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">01</span>
                             </div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Statut</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Modèle Fine-Tuné</div>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ export default function ProjectsSection() {
                                     </div>
 
                                     {/* Title */}
-                                    <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-4 group-hover:text-blue-400 transition-colors duration-300">
+                                    <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-4 group-hover:text-blue-300 transition-colors duration-300">
                                         {project.title}
                                     </h3>
 
@@ -123,14 +123,31 @@ export default function ProjectsSection() {
                                         </div>
                                     </div>
 
-                                    {/* Voir le projet Link */}
-                                    <a
-                                        href={project.link}
-                                        className="inline-flex items-center gap-2 text-sm font-mono text-blue-300 hover:text-white transition-colors group/link"
-                                    >
-                                        <span>Voir le projet</span>
-                                        <span className="group-hover/link:translate-x-1 transition-transform">→</span>
-                                    </a>
+                                    {/* Action Links */}
+                                    <div className="flex flex-col gap-2">
+                                        {project.kaggle && (
+                                            <a
+                                                href={project.kaggle}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 text-sm font-mono text-blue-300 hover:text-white transition-colors group/link"
+                                            >
+                                                <span>Voir sur Kaggle</span>
+                                                <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                                            </a>
+                                        )}
+                                        {project.github && (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 text-sm font-mono text-blue-300 hover:text-white transition-colors group/link"
+                                            >
+                                                <span>Voir sur Github</span>
+                                                <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                                            </a>
+                                        )}
+                                    </div>
 
                                     {/* Bottom HUD Corner */}
                                     <div className="absolute bottom-4 left-4 w-8 h-8 border-b border-l border-white/20 group-hover:border-blue-400/30 transition-colors"></div>

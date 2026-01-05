@@ -23,8 +23,8 @@ export default function Navbar() {
     return (
         <>
             <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pointer-events-none flex justify-center pt-6 px-4`}>
-                <div className={`pointer-events-auto transition-all duration-500 rounded-full border bg-black/60 backdrop-blur-xl border-white/20 shadow-2xl py-3 px-6 sm:px-8`}>
-                    <div className="flex items-center gap-6 sm:gap-8 md:gap-12">
+                <div className={`pointer-events-auto transition-all duration-500 rounded-full border bg-black/60 backdrop-blur-xl border-white/20 shadow-2xl py-3 px-8 w-full md:w-auto`}>
+                    <div className="flex items-center gap-4 sm:gap-8 md:gap-12 justify-between">
 
                         {/* Branding */}
                         <Link href="/" className="group relative">

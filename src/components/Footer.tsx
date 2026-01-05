@@ -53,7 +53,7 @@ export default function Footer() {
 
                     {/* Column 2: Navigation */}
                     <div className="lg:pl-12">
-                        <div className="font-mono text-base text-blue-400 uppercase tracking-widest mb-6">Explore</div>
+                        <div className="font-mono text-base text-blue-300 uppercase tracking-widest mb-6">Explore</div>
                         <nav className="flex flex-col space-y-3">
                             {navigation.map((item) => (
                                 <a
@@ -61,7 +61,7 @@ export default function Footer() {
                                     href={item.href}
                                     className="text-lg font-rajdhani font-medium text-gray-300 hover:text-white transition-colors w-fit group flex items-center gap-2"
                                 >
-                                    <span className="w-0 group-hover:w-2 h-px bg-blue-400 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-px bg-blue-300 transition-all duration-300"></span>
                                     {item.name}
                                 </a>
                             ))}
@@ -70,7 +70,7 @@ export default function Footer() {
 
                     {/* Column 3: Socials */}
                     <div>
-                        <div className="font-mono text-base text-blue-400 uppercase tracking-widest mb-6">Connect</div>
+                        <div className="font-mono text-base text-blue-300 uppercase tracking-widest mb-6">Connect</div>
                         <div className="flex flex-col space-y-3">
                             {socials.map((social) => (
                                 <a
@@ -80,7 +80,7 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     className="text-lg font-rajdhani font-medium text-gray-300 hover:text-white transition-colors w-fit group flex items-center gap-2"
                                 >
-                                    <span className="w-0 group-hover:w-2 h-px bg-blue-400 transition-all duration-300"></span>
+                                    <span className="w-0 group-hover:w-2 h-px bg-blue-300 transition-all duration-300"></span>
                                     {social.name}
                                 </a>
                             ))}

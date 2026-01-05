@@ -73,27 +73,30 @@ export default function AboutSection() {
                 </div>
 
                 {/* BLOCK 3: Stat 1 - Bottom Left Quarter (3x4) */}
-                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="4+ years of professional development experience">
+                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="Kaggle Ranking">
                     <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">03+</div>
-                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Années d'apprentissage</div>
+                        <div className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></div>
+                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">Actif</div>
+                        </div>
+                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Kaggle</div>
                     </div>
                     <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-white/20"></div>
                 </div>
 
                 {/* BLOCK 4: Stat 2 - Bottom (3x4) */}
-                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="25+ completed projects">
+                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="Education">
                     <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">04+</div>
-                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Projets réalisés</div>
+                        <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">03+</div>
+                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Année d'études</div>
                     </div>
                 </div>
 
                 {/* BLOCK 5: Stat 3 - Bottom (3x4) */}
-                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="Technologies apprises">
+                <div className="col-span-6 md:col-span-3 relative border-r border-white/20 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center group transition-colors cursor-default py-8 md:py-12" title="Goal">
                     <div className="text-center">
-                        <div className="text-4xl lg:text-5xl font-bold text-white font-chakra-petch">12+</div>
-                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Technologies</div>
+                        <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">PhD</div>
+                        <div className="text-sm font-mono text-blue-300 uppercase tracking-widest mt-2">Objectif</div>
                     </div>
                 </div>
 

@@ -62,18 +62,18 @@ export default function SkillsSection() {
                     {/* Stats */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12">
                         <div className="text-center">
-                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">4+</div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Années</div>
-                        </div>
-                        <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
-                        <div className="text-center">
-                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">12</div>
+                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">12+</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Technologies</div>
                         </div>
                         <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
-                            <div className="text-2xl lg:text-3xl font-bold text-blue-300 font-chakra-petch">25+</div>
-                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
+                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">10+</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Papers to Code</div>
+                        </div>
+                        <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
+                        <div className="text-center">
+                            <div className="text-2xl lg:text-3xl font-bold text-blue-300 font-chakra-petch">03</div>
+                            <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Architectures</div>
                         </div>
                     </div>
                 </div>

@@ -83,10 +83,10 @@ export default function HeroSection() {
                     {/* Divider */}
                     <div className="hidden md:block w-px h-10 bg-white/20 mx-8"></div>
 
-                    {/* Center Modules List - Desktop Only */}
-                    <div className="hidden lg:flex flex-1 justify-center items-center gap-4">
+                    {/* Center Modules List - Visible on all screens now */}
+                    <div className="flex flex-1 justify-center items-center gap-2 md:gap-4">
                         {['MACHINE_LEARNING', 'LLM', 'CNN'].map((tag) => (
-                            <span key={tag} className="text-xs font-mono font-bold text-white border border-white/20 px-5 py-2 bg-white/5 hover:bg-white/20 hover:border-white/40 transition-all cursor-crosshair tracking-wider">
+                            <span key={tag} className="text-[10px] md:text-xs font-mono font-bold text-white border border-white/20 px-3 py-1.5 md:px-5 md:py-2 bg-white/5 hover:bg-white/20 hover:border-white/40 transition-all cursor-crosshair tracking-wider">
                                 {tag}
                             </span>
                         ))}
@@ -96,7 +96,7 @@ export default function HeroSection() {
                     <div className="hidden lg:block w-px h-10 bg-white/20 mx-8"></div>
 
                     {/* Right Scroll Indicator */}
-                    <div className="flex flex-1 justify-center items-center gap-4 group cursor-pointer">
+                    <div className="hidden md:flex flex-1 justify-center items-center gap-4 group cursor-pointer">
                         <span className="hidden md:block text-xs font-mono font-bold text-white tracking-[0.2em] group-hover:text-white/80 transition-colors">SCROLL TO EXPLORE</span>
                         <div className="w-10 h-10 border border-white/40 bg-white/5 flex items-center justify-center animate-bounce group-hover:bg-white group-hover:text-black transition-all" onClick={() => window.location.href = '/#about'}>
                             <span className="text-sm">↓</span>

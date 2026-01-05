@@ -10,7 +10,7 @@ function ExperienceItem({ exp, index }: { exp: any, index: number }) {
     return (
         <div
             ref={reveal.ref}
-            className={`col-span-12 grid grid-cols-12 border-b border-white/20 scroll-reveal scroll-reveal-delay-${(index % 3) + 1} ${reveal.isVisible ? 'visible' : ''}`}
+            className={`col-span-12 group grid grid-cols-12 border border-white/20 lg:border-0 lg:border-b scroll-reveal scroll-reveal-delay-${(index % 3) + 1} ${reveal.isVisible ? 'visible' : ''} hover:border-blue-300/50 lg:hover:border-white/20 transition-all duration-500`}
         >
             {/* Date Block - Always on left */}
             <div className={`col-span-12 lg:col-span-3 relative lg:border-r border-b border-white/20 ${index % 2 === 0 ? 'bg-black/40' : 'bg-black/60'
@@ -24,7 +24,7 @@ function ExperienceItem({ exp, index }: { exp: any, index: number }) {
                 </div>
 
                 <div className="text-center relative z-10">
-                    <div className="text-5xl lg:text-6xl font-bold text-blue-400 font-chakra-petch">
+                    <div className="text-5xl lg:text-6xl font-bold text-blue-300 font-chakra-petch">
                         {exp.year}
                     </div>
                 </div>
@@ -34,7 +34,7 @@ function ExperienceItem({ exp, index }: { exp: any, index: number }) {
             {/* Content Block - Always on right */}
             <div className={`col-span-12 lg:col-span-9 relative ${index % 2 === 0 ? 'bg-black/60' : 'bg-black/40'
                 } backdrop-blur-sm p-6 sm:p-8 lg:p-12 flex flex-col justify-center`}>
-                <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-3 hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch leading-tight mb-3 group-hover:text-blue-300 lg:group-hover:text-white lg:hover:text-blue-300 transition-colors">
                     {exp.title}
                 </h3>
                 <div className="font-rajdhani text-lg lg:text-xl text-gray-300 font-medium mb-2">
@@ -50,7 +50,7 @@ function ExperienceItem({ exp, index }: { exp: any, index: number }) {
                     {exp.technologies.map((tech: string) => (
                         <span
                             key={tech}
-                            className="border border-white/20 px-3 py-1.5 bg-white/5 text-base text-gray-300 font-mono hover:border-blue-400/50 transition-all"
+                            className="border border-white/20 px-3 py-1.5 bg-white/5 text-base text-gray-300 font-mono hover:border-blue-300/50 transition-all"
                         >
                             {tech}
                         </span>
@@ -132,34 +132,22 @@ export default function ExperienceSection() {
 
                 {/* TEXT BLOCK (7x6) - Like About Section */}
                 <div className="col-span-12 lg:col-span-7 lg:row-span-6 relative border-b border-white/20 bg-black/60 backdrop-blur-sm p-6 sm:p-8 lg:p-12 xl:p-20 flex flex-col justify-center">
-                    <div className="font-mono text-xs text-blue-400 uppercase tracking-widest mb-4">Professional Journey</div>
+                    <div className="font-mono text-xs text-blue-300 uppercase tracking-widest mb-4">Professional Journey</div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-white leading-[0.9] mb-6">
                         PARCOURS
                     </h2>
                     <p className="font-rajdhani text-base lg:text-xl text-gray-300 font-medium leading-relaxed mb-8">
-                        Mon parcours d'apprentissage en intelligence artificielle. Des premiers réseaux de neurones aux modèles de langage, j'apprends en réimplémentant et en pratiquant.
+                        Je passe du développement logiciel à l'ingénierie IA avec une conviction : pour comprendre, il faut construire. Je déconstruis et recode les architectures modernes pour maîtriser ce qui se passe sous le capot, au-delà des simples abstractions.
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        <div>
-                            <div className="text-3xl lg:text-4xl font-bold text-blue-400 font-chakra-petch">4+</div>
-                            <div className="text-base font-mono text-gray-500 uppercase tracking-widest mt-1">Années</div>
-                        </div>
-                        <div>
-                            <div className="text-3xl lg:text-4xl font-bold text-blue-400 font-chakra-petch">4</div>
-                            <div className="text-base font-mono text-gray-500 uppercase tracking-widest mt-1">Entreprises</div>
-                        </div>
-                        <div>
-                            <div className="text-3xl lg:text-4xl font-bold text-blue-400 font-chakra-petch">25+</div>
-                            <div className="text-base font-mono text-gray-500 uppercase tracking-widest mt-1">Projets</div>
-                        </div>
-                    </div>
                     <div className="absolute top-4 right-4 w-12 h-12 border-t border-r border-white/20"></div>
                 </div>
 
                 {/* EXPERIENCE BLOCKS - Alternating layout */}
-                {experiences.map((exp, index) => (
-                    <ExperienceItem key={index} exp={exp} index={index} />
-                ))}
+                <div className="col-span-12 grid grid-cols-12 lg:contents gap-y-6 px-6 lg:px-0 lg:gap-0 mt-6 lg:mt-0">
+                    {experiences.map((exp, index) => (
+                        <ExperienceItem key={index} exp={exp} index={index} />
+                    ))}
+                </div>
 
             </div>
         </section>
