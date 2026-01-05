@@ -29,13 +29,10 @@ export function useParallax(options: UseParallaxOptions = {}) {
                 const scrollProgress = (windowHeight - elementTop) / (windowHeight + elementHeight);
 
                 // Calculate parallax offset (centered around 0)
+                // When scrolling down (element moves up), we want to offset it down to create parallax
                 const parallaxY = (scrollProgress - 0.5) * 100 * speed;
 
-                // Calculate scale (starts larger, gets smaller as you scroll)
-                // This creates depth by making the image appear to recede
-                const currentScale = scale - (scrollProgress * (scale - 1));
-
-                setTransform({ y: parallaxY, scale: currentScale });
+                setTransform({ y: parallaxY, scale: scale });
             }
         };
 

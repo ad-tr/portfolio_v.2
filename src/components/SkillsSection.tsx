@@ -5,28 +5,28 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 export default function SkillsSection() {
     const skills = {
         deepLearning: [
-            { name: "PyTorch", years: "2", projects: "4+" },
-            { name: "Transformers", years: "1", projects: "2+" },
-            { name: "Réseaux de Neurones", years: "3", projects: "5+" },
-            { name: "NLP", years: "2", projects: "3+" }
+            { name: "Diffusers & LLM", years: "1", projects: "2" },
+            { name: "PyTorch", years: "1", projects: "1" },
+            { name: "NLP", years: "1", projects: "3" },
+            { name: "Réseaux de Neurones", years: "2", projects: "2" }
         ],
         machineLearning: [
-            { name: "Scikit-Learn", years: "2", projects: "3+" },
-            { name: "Analyse de Données", years: "2", projects: "4+" },
-            { name: "Feature Engineering", years: "2", projects: "3+" },
-            { name: "Apprentissage Supervisé", years: "2", projects: "4+" }
+            { name: "RAG & LangChain", years: "1", projects: "1" },
+            { name: "LoRA / QLoRA", years: "1", projects: "1" },
+            { name: "Scikit-Learn", years: "2", projects: "2" },
+            { name: "Pandas", years: "2", projects: "2" }
         ],
         programmation: [
-            { name: "Python", years: "3", projects: "10+" },
-            { name: "JavaScript/TypeScript", years: "2", projects: "5+" },
-            { name: "NumPy", years: "3", projects: "6+" },
-            { name: "Pandas", years: "2", projects: "4+" }
+            { name: "Python", years: "4", projects: "5" },
+            { name: "NumPy", years: "2", projects: "2" },
+            { name: "TypeScript", years: "2", projects: "3+" },
+            { name: "Algorithmique", years: "4", projects: "5" }
         ],
         devWeb: [
-            { name: "Next.js", years: "2", projects: "3+" },
-            { name: "React", years: "2", projects: "4+" },
-            { name: "Streamlit", years: "1", projects: "2+" },
-            { name: "TailwindCSS", years: "2", projects: "3+" }
+            { name: "Next.js / React", years: "3", projects: "3+" },
+            { name: "Streamlit", years: "1", projects: "1" },
+            { name: "TailwindCSS", years: "2", projects: "2" },
+            { name: "Git", years: "3", projects: "5" }
         ]
     };
 
@@ -56,7 +56,7 @@ export default function SkillsSection() {
                         COMPÉTENCES
                     </h2>
                     <p className="font-rajdhani text-base lg:text-xl text-gray-400 font-medium max-w-2xl mx-auto mb-8">
-                        Technologies que j'apprends et utilise pour mes projets en intelligence artificielle.
+                        Voici l'ensemble des technologies que j'ai eu l'occasion d'utiliser au cours de mes projets.
                     </p>
 
                     {/* Stats */}
@@ -67,12 +67,12 @@ export default function SkillsSection() {
                         </div>
                         <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
-                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">10+</div>
+                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">03+</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Papers to Code</div>
                         </div>
                         <div className="w-full sm:w-px h-px sm:h-8 bg-white/20"></div>
                         <div className="text-center">
-                            <div className="text-2xl lg:text-3xl font-bold text-blue-300 font-chakra-petch">03</div>
+                            <div className="text-2xl lg:text-3xl font-bold text-white font-chakra-petch">03</div>
                             <div className="text-sm font-mono text-gray-500 uppercase tracking-widest mt-1">Architectures</div>
                         </div>
                     </div>

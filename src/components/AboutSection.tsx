@@ -7,7 +7,7 @@ import { useParallax } from "@/hooks/useParallax";
 export default function AboutSection() {
     // Animation hooks
     const contentReveal = useScrollReveal({ threshold: 0.2 });
-    const imageParallax = useParallax({ speed: 0.3 });
+    const imageParallax = useParallax({ speed: 1.5 });
 
     return (
         <section id="about" className="relative w-full min-h-screen lg:h-screen bg-black overflow-hidden border-t border-white/20">
@@ -61,10 +61,10 @@ export default function AboutSection() {
                     {/* Description */}
                     <div className="space-y-4 max-w-xl">
                         <p className="font-rajdhani text-base lg:text-xl text-gray-300 font-medium leading-relaxed">
-                            Je suis étudiant en <span className="text-white border-b border-white/30 pb-0.5">architecture logicielle à l'ESGI Reims</span>, passionné par l'intelligence artificielle. Sur mon temps libre, j'apprends le deep learning en réimplémentant des concepts pour vraiment comprendre comment ils fonctionnent.
+                            Je suis étudiant en <span className="text-white border-b border-white/30 pb-0.5">architecture logicielle à l'ESGI Reims</span>, passionné par l'intelligence artificielle. Sur mon temps libre, j'apprends le deep learning en réimplémentant des concepts pour comprendre comment ils fonctionnent.
                         </p>
                         <p className="font-rajdhani text-base lg:text-xl text-gray-300 font-medium leading-relaxed">
-                            Mon objectif est de poursuivre un PhD en IA pour contribuer à la recherche. J'aime apprendre en faisant, que ce soit en réimplémentant des algorithmes ou en participant à des compétitions.
+                            Mon objectif est de poursuivre un PhD en IA pour contribuer à la recherche. J'aime apprendre en faisant, que ce soit de la recherche ou des compétition.
                         </p>
                     </div>
 

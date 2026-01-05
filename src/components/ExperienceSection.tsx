@@ -63,7 +63,7 @@ function ExperienceItem({ exp, index }: { exp: any, index: number }) {
 }
 
 export default function ExperienceSection() {
-    const imageParallax = useParallax({ speed: 0.3 });
+    const imageParallax = useParallax({ speed: 1.5 });
     const experiences = [
         {
             year: "2025",

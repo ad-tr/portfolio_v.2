@@ -38,7 +38,7 @@ export default function ProjectsSection() {
                         MES PROJETS
                     </h2>
                     <p className="font-rajdhani text-base lg:text-xl text-gray-300 font-medium max-w-2xl mx-auto mb-8">
-                        Mes projets d'apprentissage en intelligence artificielle. Je réimplémente des concepts et participe à des challenges pour apprendre.
+                        Ce qui me motive, c'est de pouvoir repousser les limites de l'état de l'art et de participer aux prochaines avancées du domaine. Pour cela, je fais des projets sur lesquels je peux découvrir de nouvelles technologies et approches.
                     </p>
 
                     {/* Stats */}
@@ -94,7 +94,7 @@ export default function ProjectsSection() {
                                 {/* Content */}
                                 <div className="relative flex-1 flex flex-col p-6 lg:p-8">
                                     {/* Category & Year */}
-                                    <div className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-3">
+                                    <div className="font-mono text-xs text-gray-300 uppercase tracking-widest mb-3">
                                         {project.category} • {project.year}
                                     </div>
 

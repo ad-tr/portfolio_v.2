@@ -8,7 +8,7 @@ import { useParallax } from "@/hooks/useParallax";
 
 export default function HeroSection() {
     const contentReveal = useScrollReveal({ threshold: 0.2 });
-    const imageParallax = useParallax({ speed: 0.2 });
+    const imageParallax = useParallax({ speed: 4, scale: 1 });
 
     return (
         <section className="relative w-full h-screen overflow-hidden bg-black flex flex-col justify-between">
@@ -23,7 +23,7 @@ export default function HeroSection() {
             <div ref={imageParallax.ref} className="absolute inset-0 w-full h-full z-0 overflow-hidden">
                 <div
                     className="relative w-full h-full will-change-transform"
-                    style={{ transform: `translateY(${imageParallax.transform.y}px) scale(1.1)` }}
+                    style={{ transform: `translateY(${imageParallax.transform.y}px) scale(${imageParallax.transform.scale})` }}
                 >
                     <Image
                         src="/images/hero.jpg"
@@ -53,7 +53,7 @@ export default function HeroSection() {
                     {/* Description */}
                     <div className="max-w-2xl pt-2">
                         <p className="font-rajdhani text-lg md:text-xl lg:text-2xl text-gray-300 font-medium tracking-wide leading-relaxed">
-                            <span className="text-white border-b border-white/30 pb-0.5">Passionné par l'intelligence artificielle.</span> J'apprends le deep learning en réimplémentant des concepts et en participant à des challenges pour comprendre comment ils fonctionnent.
+                            <span className="text-white border-b border-white/30 pb-0.5">Passionné par l'intelligence artificielle.</span> J'apprends le deep learning en réimplémentant des concepts et en participant à des challenges pour continuer à apprendre et à m'améliorer.
                         </p>
                     </div>
 
