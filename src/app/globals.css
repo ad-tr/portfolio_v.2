@@ -34,6 +34,12 @@
   --font-chakra-petch: var(--font-chakra-petch), sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -110,7 +116,8 @@ h6 {
 /* Smooth Scroll Behavior */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Offset pour la navigation vers les sections */
+  scroll-padding-top: 80px;
+  /* Offset pour la navigation vers les sections */
 }
 
 /* Page Loader Animations */

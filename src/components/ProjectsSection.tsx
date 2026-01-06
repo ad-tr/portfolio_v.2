@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import ParticleBackground from "./ParticleBackground";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { projectsData } from "@/data/projects";
 
@@ -20,6 +21,9 @@ export default function ProjectsSection() {
 
     return (
         <section id="projects" className="relative w-full min-h-screen bg-black py-20 lg:py-20">
+            {/* Background Particles */}
+            <ParticleBackground />
+
             {/* Background Grid */}
             <div className="absolute top-0 left-0 w-full h-full z-0 opacity-20 pointer-events-none">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:100px_100px]" />

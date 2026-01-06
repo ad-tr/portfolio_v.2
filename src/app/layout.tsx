@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Orbitron, Rajdhani, Michroma, Syne, Space_Grotesk, Chakra_Petch } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "../components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${rajdhani.variable} ${michroma.variable} ${syne.variable} ${spaceGrotesk.variable} ${chakraPetch.variable} antialiased`}
       >
+        <CustomCursor />
         {children}
       </body>
     </html>
